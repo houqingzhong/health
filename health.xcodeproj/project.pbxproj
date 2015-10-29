@@ -50,6 +50,9 @@
 		FFD8B9A51BE128CE0041EBE6 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B9A41BE128CE0041EBE6 /* IntroViewController.m */; };
 		FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */ = {isa = PBXBuildFile; fileRef = FFD8B9A71BE12A020041EBE6 /* yyys.html */; };
 		FFD8CCA31BE11A55006FBF8D /* SCYSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8CCA21BE11A55006FBF8D /* SCYSViewController.m */; };
+		FFDA633E1BE2D94C00CF80B6 /* 梅花三弄.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633D1BE2D85300CF80B6 /* 梅花三弄.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA633F1BE2D94F00CF80B6 /* 十面埋伏.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633C1BE2D77B00CF80B6 /* 十面埋伏.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63401BE2D95200CF80B6 /* 潇湘水云.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */; settings = {ASSET_TAGS = (); }; };
 		FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4901BE12DBF002CCAB9 /* scys.html */; };
 		FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */; };
 		FFDCC4961BE1304B002CCAB9 /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4951BE1304B002CCAB9 /* WebViewDetailController.m */; };
@@ -125,6 +128,8 @@
 		FFD8CCA11BE11A55006FBF8D /* SCYSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYSViewController.h; sourceTree = "<group>"; };
 		FFD8CCA21BE11A55006FBF8D /* SCYSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYSViewController.m; sourceTree = "<group>"; };
 		FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "潇湘水云.m4a"; sourceTree = "<group>"; };
+		FFDA633C1BE2D77B00CF80B6 /* 十面埋伏.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "十面埋伏.m4a"; sourceTree = "<group>"; };
+		FFDA633D1BE2D85300CF80B6 /* 梅花三弄.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "梅花三弄.m4a"; sourceTree = "<group>"; };
 		FFDCC4901BE12DBF002CCAB9 /* scys.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys.html; sourceTree = "<group>"; };
 		FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_heart.html; sourceTree = "<group>"; };
 		FFDCC4941BE1304B002CCAB9 /* WebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDetailController.h; sourceTree = "<group>"; };
@@ -266,6 +271,8 @@
 		FFD8B9A61BE129F50041EBE6 /* html */ = {
 			isa = PBXGroup;
 			children = (
+				FFDA633D1BE2D85300CF80B6 /* 梅花三弄.m4a */,
+				FFDA633C1BE2D77B00CF80B6 /* 十面埋伏.m4a */,
 				FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */,
 				1D65B9711BE2330700926244 /* 梅花三弄.mp3 */,
 				1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */,
@@ -375,10 +382,12 @@
 				1D65B97C1BE23A0400926244 /* scys_chenshi.html in Resources */,
 				1D65B9801BE23A1A00926244 /* scys_wushi.html in Resources */,
 				1D65B9701BE2306200926244 /* 阳春白雪.mp3 in Resources */,
+				FFDA63401BE2D95200CF80B6 /* 潇湘水云.m4a in Resources */,
 				1D65B98A1BE23A4E00926244 /* scys_haishi.html in Resources */,
 				FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */,
 				1D65B9721BE2330700926244 /* 梅花三弄.mp3 in Resources */,
 				FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */,
+				FFDA633E1BE2D94C00CF80B6 /* 梅花三弄.m4a in Resources */,
 				1D65B9861BE23A3900926244 /* scys_youshi.html in Resources */,
 				1D65B97E1BE23A1000926244 /* scys_sishi.html in Resources */,
 				FFC30B6E1BDCB52100D89D62 /* Assets.xcassets in Resources */,
@@ -387,6 +396,7 @@
 				FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */,
 				1D65B9821BE23A2300926244 /* scys_weishi.html in Resources */,
 				FFC30B6C1BDCB52100D89D62 /* Main.storyboard in Resources */,
+				FFDA633F1BE2D94F00CF80B6 /* 十面埋伏.m4a in Resources */,
 				1D65B96C1BE22DFB00926244 /* 胡笳十八拍.mp3 in Resources */,
 				1D65B9881BE23A4300926244 /* scys_xushi.html in Resources */,
 			);

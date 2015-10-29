@@ -82,7 +82,7 @@
     dict[@"title"] = @"养脾";
     dict[@"sub_title"] = @"脾胃者，仓廪之官，五味出焉。";
     dict[@"html"] = @"yyys_spleen";
-    dict[@"mp3"] = @"十面埋伏(琵琶曲).mp3";
+    dict[@"mp3"] = @"十面埋伏.m4a";
     [_dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];

@@ -252,4 +252,26 @@
     
 }
 
+/*
+ 
+ NSMutableDictionary *retDic = [[NSMutableDictionary alloc] init];
+ 
+ 
+ 
+ NSURL *url = [NSURL fileURLWithPath:path];
+ AVURLAsset *mp3Asset = [AVURLAsset URLAssetWithURL:url options:nil];
+ 
+ //    NSLog(@"%@",mp3Asset);
+ 
+ for (NSString *format in [mp3Asset availableMetadataFormats]) {
+ NSLog(@"format type = %@",format);
+ for (AVMetadataItem *metadataItem in [mp3Asset metadataForFormat:format]) {
+ 
+ if(metadataItem.commonKey)
+ [retDic setObject:metadataItem.value forKey:metadataItem.commonKey];
+ 
+ }
+ }
+
+ */
 @end
