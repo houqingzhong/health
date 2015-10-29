@@ -16,6 +16,7 @@
 		1D65B96E1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96D1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 */; };
 		1D65B9701BE2306200926244 /* 阳春白雪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */; };
 		1D65B9721BE2330700926244 /* 梅花三弄.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9711BE2330700926244 /* 梅花三弄.mp3 */; };
+		1D65B9741BE237C600926244 /* scys_zishi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9731BE237C600926244 /* scys_zishi.html */; };
 		C0F1FDD0876907098CDDD630 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F71D64658B9D73818BD77B0E /* libPods.a */; };
 		FF28B72C1BDCF4A60054C7B4 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72B1BDCF4A60054C7B4 /* HttpClient.m */; };
 		FF28B72F1BDD05330054C7B4 /* WeacherLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72E1BDD05330054C7B4 /* WeacherLabel.m */; };
@@ -55,6 +56,7 @@
 		1D65B96D1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "十面埋伏(琵琶曲).mp3"; sourceTree = "<group>"; };
 		1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "阳春白雪.mp3"; sourceTree = "<group>"; };
 		1D65B9711BE2330700926244 /* 梅花三弄.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "梅花三弄.mp3"; sourceTree = "<group>"; };
+		1D65B9731BE237C600926244 /* scys_zishi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_zishi.html; sourceTree = "<group>"; };
 		399DFCCFE63ACE241A2D3D6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F71D64658B9D73818BD77B0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF28B72A1BDCF4A60054C7B4 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				1D65B95D1BE217B100926244 /* yyys_spleen.html */,
 				1D65B95F1BE2180000926244 /* yyys_lung.html */,
 				1D65B9611BE2182700926244 /* yyys_kidney.html */,
+				1D65B9731BE237C600926244 /* scys_zishi.html */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				1D65B9671BE224DA00926244 /* scys_html_bg.png in Resources */,
 				1D65B9601BE2180000926244 /* yyys_lung.html in Resources */,
 				1D65B96E1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 in Resources */,
+				1D65B9741BE237C600926244 /* scys_zishi.html in Resources */,
 				1D65B9701BE2306200926244 /* 阳春白雪.mp3 in Resources */,
 				FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */,
 				1D65B9721BE2330700926244 /* 梅花三弄.mp3 in Resources */,

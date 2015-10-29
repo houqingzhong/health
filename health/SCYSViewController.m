@@ -27,7 +27,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"十二时辰养生";
 
-    self.navigationItem.rightBarButtonItem = nil;
+//    self.navigationItem.rightBarButtonItem = nil;
 
     NSComparisonResult order = [[UIDevice currentDevice].systemVersion compare: @"7.0" options: NSNumericSearch];
     if (order == NSOrderedSame || order == NSOrderedDescending)
@@ -69,6 +69,7 @@
     dict[@"title"] = @"23:00-1:00 胆经";
     dict[@"sub_title"] = @"子时";
     dict[@"desc"] = @"子时睡得足，黑眼圈不露。";
+    dict[@"html"] = @"scys_zishi";
     dict[@"detail"] = @"此时胆经最旺摄生学认为：\"肝之余气，泻于胆，聚而成精胆为中正之官，五脏六腑决定于胆气以壮胆，邪不能侵胆气虚则怯，气短，谋虑而不能决断\"因而可知胆的重要性。有些人等闲切除患者的胆，是不负责的表现。胆汁需要新陈代谢，人在子时前入睡，胆方能完成代谢。\"胆有多清，脑有多清\"，凡在子时前入睡者，晨醒后脑筋清楚，精神和面红润。反之，子时前不睡者，精神和面清白出格是胆汁缺乏新陈代谢的气而变浓结晶，形成结石，犹如海水变浓晒成盐此中一部门人还会是以而\"胆怯\"胆经这时要上床困觉，利于骨髓造血。";
     [_dataArray addObject:dict];
     
@@ -202,10 +203,19 @@
 
 - (void)jumpToDetail:(NSDictionary *)dict
 {
-    DetailViewController *detail = [DetailViewController new];
-    [detail setData:dict];
-    
-    [self.navigationController pushViewController:detail animated:YES];
+    if (dict[@"html"]) {
+        IntroViewController *iv = [IntroViewController new];
+        [iv loadHtml:dict[@"html"]];
+        [self.navigationController pushViewController:iv animated:YES];
+    }
+    else
+    {
+        DetailViewController *detail = [DetailViewController new];
+        [detail setData:dict];
+        
+        [self.navigationController pushViewController:detail animated:YES];
+        
+    }
     
 }
 
