@@ -124,6 +124,7 @@
 		FFD8B9A71BE12A020041EBE6 /* yyys.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys.html; sourceTree = "<group>"; };
 		FFD8CCA11BE11A55006FBF8D /* SCYSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYSViewController.h; sourceTree = "<group>"; };
 		FFD8CCA21BE11A55006FBF8D /* SCYSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYSViewController.m; sourceTree = "<group>"; };
+		FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "潇湘水云.m4a"; sourceTree = "<group>"; };
 		FFDCC4901BE12DBF002CCAB9 /* scys.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys.html; sourceTree = "<group>"; };
 		FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_heart.html; sourceTree = "<group>"; };
 		FFDCC4941BE1304B002CCAB9 /* WebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDetailController.h; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 		FFD8B9A61BE129F50041EBE6 /* html */ = {
 			isa = PBXGroup;
 			children = (
+				FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */,
 				1D65B9711BE2330700926244 /* 梅花三弄.mp3 */,
 				1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */,
 				1D65B96D1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 */,

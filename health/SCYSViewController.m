@@ -96,6 +96,7 @@
     dict[@"title"] = @"5:00-7:00 大肠经";
     dict[@"sub_title"] = @"卯时";
     dict[@"html"] = @"scys_maoshi";
+    dict[@"mp3"] = @"潇湘水云";
     dict[@"desc"] = @"卯时大肠蠕，排毒渣滓出。";
     dict[@"detail"] = @"此时大肠经最旺，\"肺与大肠相表里\"，肺将充足的新颖血液布满全身，紧接着促进大肠经步入兴奋状况，完成对食品中水分与营养的吸收，排出渣滓。这时起床，大肠蠕动旺盛，适合排泻。";
     [_dataArray addObject:dict];
@@ -214,10 +215,17 @@
 
 - (void)jumpToDetail:(NSDictionary *)dict
 {
-    if (dict[@"html"]) {
+    if (dict[@"html"] && dict[@"mp3"]) {
+        WebViewDetailController *iv = [WebViewDetailController new];
+        [iv loadData:dict];
+        [self.navigationController pushViewController:iv animated:YES];
+    }
+    else if(dict[@"html"])
+    {
         IntroViewController *iv = [IntroViewController new];
         [iv loadHtml:dict[@"html"]];
         [self.navigationController pushViewController:iv animated:YES];
+
     }
     else
     {
