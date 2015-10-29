@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9220055E8412F65A10E078C4'
+               BlueprintIdentifier = 'B97DFEBA6FB5F6B17A0185E6'
                BlueprintName = 'RichStyleLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libRichStyleLabel.a'>

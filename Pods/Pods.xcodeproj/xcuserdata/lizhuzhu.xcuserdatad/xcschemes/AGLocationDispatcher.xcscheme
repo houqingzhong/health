@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '00E25398280DB7FEE151D993'
+               BlueprintIdentifier = '4AF98DA51D853059BD2A4D00'
                BlueprintName = 'AGLocationDispatcher'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libAGLocationDispatcher.a'>

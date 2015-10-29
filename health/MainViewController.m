@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 
 #import "HPublic.h"
+#import "HTypeCell.h"
 
 #define MainCellIdentifier  @"MainCellIdentifier"
 #define HTimerHeader @"HTimerHeader"
@@ -42,7 +43,6 @@
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    //_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.separatorColor = [UIColor greenMunsell];
     
 
@@ -53,7 +53,7 @@
 
     
     
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:MainCellIdentifier];
+    [_tableView registerClass:[HTypeCell class] forCellReuseIdentifier:MainCellIdentifier];
     
     
     
@@ -67,14 +67,7 @@
     
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"音乐养生";
-    dict[@"icon"] = @"yinyue";
-
-    [_dataArray addObject:dict];
-    
-    
-//    dict = [NSMutableDictionary new];
-//    dict[@"title"] = @"经络养生";
-//    dict[@"icon"] = @"yinyue";
+    dict[@"icon"] = @"yinyue";    
     
     [_dataArray addObject:dict];
     
@@ -102,19 +95,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MainCellIdentifier forIndexPath:indexPath];
+    HTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:MainCellIdentifier forIndexPath:indexPath];
     
     if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MainCellIdentifier];
-        
-        [cell.imageView anchorCenterLeftWithLeftPadding:20*XA width:60*XA height:60*XA];
+        cell = [[HTypeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MainCellIdentifier];
     }
-    
-    NSDictionary *dict = _dataArray[indexPath.row];
 
-    cell.imageView.image = [UIImage imageNamed:dict[@"icon"]];
-    cell.textLabel.text = dict[@"title"];
 
+    [cell setData:_dataArray[indexPath.row]];
     return cell;
     
 }
@@ -122,7 +110,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 90*XA;
+    return 100*XA;
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath

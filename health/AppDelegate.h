@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class APAudioPlayer;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+
+/* Player */
+@property (nonatomic, strong) APAudioPlayer *player;
+@property (nonatomic, strong) NSDictionary  *dict;
 
 
 @end

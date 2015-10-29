@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F89A2B79E8E43ADCA48E0801'
+               BlueprintIdentifier = '1A3162CC2AB55F50ED241D17'
                BlueprintName = 'Facade'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libFacade.a'>

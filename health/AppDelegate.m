@@ -15,6 +15,13 @@
 
 @implementation AppDelegate
 
+- (APAudioPlayer *)player
+{
+    if (!_player) {
+        _player = [APAudioPlayer new];
+    }
+    return _player;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

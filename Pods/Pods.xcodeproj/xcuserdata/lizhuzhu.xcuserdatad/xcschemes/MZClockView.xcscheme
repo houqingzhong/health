@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7AC2E671ED2DF1073F6C9780'
+               BlueprintIdentifier = 'CE108EC0924FDE9933D7C9D4'
                BlueprintName = 'MZClockView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libMZClockView.a'>

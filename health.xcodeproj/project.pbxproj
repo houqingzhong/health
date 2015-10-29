@@ -54,6 +54,9 @@
 		FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */; };
 		FFDCC4961BE1304B002CCAB9 /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4951BE1304B002CCAB9 /* WebViewDetailController.m */; };
 		FFDCC4981BE13304002CCAB9 /* yyys_liver.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4971BE13304002CCAB9 /* yyys_liver.html */; };
+		FFDCC49B1BE270FC002CCAB9 /* HTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC49A1BE270FC002CCAB9 /* HTypeCell.m */; settings = {ASSET_TAGS = (); }; };
+		FFDCC49E1BE27289002CCAB9 /* YYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC49D1BE27289002CCAB9 /* YYCell.m */; settings = {ASSET_TAGS = (); }; };
+		FFDCC4A11BE2775B002CCAB9 /* HPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4A01BE2775B002CCAB9 /* HPlayer.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +129,12 @@
 		FFDCC4941BE1304B002CCAB9 /* WebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDetailController.h; sourceTree = "<group>"; };
 		FFDCC4951BE1304B002CCAB9 /* WebViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDetailController.m; sourceTree = "<group>"; };
 		FFDCC4971BE13304002CCAB9 /* yyys_liver.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_liver.html; sourceTree = "<group>"; };
+		FFDCC4991BE270FC002CCAB9 /* HTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTypeCell.h; sourceTree = "<group>"; };
+		FFDCC49A1BE270FC002CCAB9 /* HTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTypeCell.m; sourceTree = "<group>"; };
+		FFDCC49C1BE27289002CCAB9 /* YYCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCell.h; sourceTree = "<group>"; };
+		FFDCC49D1BE27289002CCAB9 /* YYCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCell.m; sourceTree = "<group>"; };
+		FFDCC49F1BE2775B002CCAB9 /* HPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPlayer.h; sourceTree = "<group>"; };
+		FFDCC4A01BE2775B002CCAB9 /* HPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +241,12 @@
 				FFA281C31BDCEB140095539F /* TimerHeader.m */,
 				FF28B72D1BDD05330054C7B4 /* WeacherLabel.h */,
 				FF28B72E1BDD05330054C7B4 /* WeacherLabel.m */,
+				FFDCC4991BE270FC002CCAB9 /* HTypeCell.h */,
+				FFDCC49A1BE270FC002CCAB9 /* HTypeCell.m */,
+				FFDCC49C1BE27289002CCAB9 /* YYCell.h */,
+				FFDCC49D1BE27289002CCAB9 /* YYCell.m */,
+				FFDCC49F1BE2775B002CCAB9 /* HPlayer.h */,
+				FFDCC4A01BE2775B002CCAB9 /* HPlayer.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -291,6 +306,7 @@
 				FFC30B5B1BDCB52100D89D62 /* Frameworks */,
 				FFC30B5C1BDCB52100D89D62 /* Resources */,
 				50A0CD785E0C7B992CB1D167 /* Copy Pods Resources */,
+				0B5823ADD66A587EB04CFA79 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +393,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B5823ADD66A587EB04CFA79 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1D1FE9F1D55188A5E09ACD18 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,15 +448,18 @@
 				FFC30B691BDCB52100D89D62 /* ViewController.m in Sources */,
 				FFA281BB1BDCE2270095539F /* NSString+Extension.m in Sources */,
 				FF28B72C1BDCF4A60054C7B4 /* HttpClient.m in Sources */,
+				FFDCC4A11BE2775B002CCAB9 /* HPlayer.m in Sources */,
 				FFA281C41BDCEB140095539F /* TimerHeader.m in Sources */,
 				FFC30B7B1BDCB95100D89D62 /* HBaseCell.m in Sources */,
 				FF28B72F1BDD05330054C7B4 /* WeacherLabel.m in Sources */,
 				FFD8B9A51BE128CE0041EBE6 /* IntroViewController.m in Sources */,
 				FFC30B661BDCB52100D89D62 /* AppDelegate.m in Sources */,
+				FFDCC49B1BE270FC002CCAB9 /* HTypeCell.m in Sources */,
 				FFDCC4961BE1304B002CCAB9 /* WebViewDetailController.m in Sources */,
 				FFA281BE1BDCE3DC0095539F /* MainViewController.m in Sources */,
 				FFA281C11BDCE6930095539F /* UIColor+Hex.m in Sources */,
 				FFD8B9A21BE1271E0041EBE6 /* BaseViewController.m in Sources */,
+				FFDCC49E1BE27289002CCAB9 /* YYCell.m in Sources */,
 				FF28B7351BDD14420054C7B4 /* DetailViewController.m in Sources */,
 				FFD8CCA31BE11A55006FBF8D /* SCYSViewController.m in Sources */,
 				FFC30B631BDCB52100D89D62 /* main.m in Sources */,
@@ -493,7 +527,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -531,7 +565,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -544,6 +578,7 @@
 			baseConfigurationReference = 399DFCCFE63ACE241A2D3D6E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = health/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -558,6 +593,7 @@
 			baseConfigurationReference = 1C59895F6647A2FA57E6C1FF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = health/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

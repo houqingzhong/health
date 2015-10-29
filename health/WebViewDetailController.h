@@ -10,6 +10,6 @@
 
 @interface WebViewDetailController : UIViewController
 
-- (void)loadHtml:(NSString *)fileName;
+- (void)loadData:(NSDictionary *)dict;
 
 @end

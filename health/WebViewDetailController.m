@@ -7,11 +7,15 @@
 //
 
 #import "WebViewDetailController.h"
+#import "HPublic.h"
+#import "HPlayer.h"
 
 @interface WebViewDetailController ()
 {
-    UIWebView *_webView;
+    HPlayer     *_player;
+    UIWebView   *_webView;
 }
+@property (nonatomic, strong) NSDictionary *dict;
 @end
 
 @implementation WebViewDetailController
@@ -21,27 +25,47 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
-        _webView = [[UIWebView alloc] init];
-        [self.view addSubview:_webView];
     }
     
     return self;
 }
 
-
-- (void)viewDidLayoutSubviews
+- (void)viewDidLoad
 {
-    [super viewDidLayoutSubviews];
+    [super viewDidLoad];
     
-    _webView.frame = self.view.bounds;
-}
+    NSComparisonResult order = [[UIDevice currentDevice].systemVersion compare: @"7.0" options: NSNumericSearch];
+    if (order == NSOrderedSame || order == NSOrderedDescending)
+    {
+        // OS version >= 7.0
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.extendedLayoutIncludesOpaqueBars = YES ;
+    }
+    
+    _webView = [[UIWebView alloc] init];
+    _player = [HPlayer new];
+    
+    
+    [self.view addSubview:_player];
+    [self.view addSubview:_webView];
 
-- (void)loadHtml:(NSString *)fileName
-{
-    NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"html"];
+    [_player anchorTopLeftWithLeftPadding:0 topPadding:0 width:self.view.width height:[HPlayer height]];
+    [_webView alignUnder:_player withLeftPadding:0 topPadding:0 width:self.view.width height:self.view.height - [HPlayer height]];
+
+    [_player setData:_dict];
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:_dict[@"html"] ofType:@"html"];
     NSURL* url = [NSURL fileURLWithPath:path];
     NSURLRequest* request = [NSURLRequest requestWithURL:url] ;
     [_webView loadRequest:request];
+
+}
+
+
+- (void)loadData:(NSDictionary *)dict
+{
+
+    self.dict = dict;
     
 }
 

@@ -12,7 +12,6 @@
 #define ScreenSize [[UIScreen mainScreen] bounds].size
 #define XA ScreenSize.width/640
 #define WS(s) __weak typeof (self) s = self
-#define App(s) AppDelegate * s = (AppDelegate *)[[UIApplication sharedApplication] delegate]
 
 #import <UIView+Facade.h>
 #import <UIColor+MoreColors.h>
@@ -23,6 +22,7 @@
 #import <TTTAttributedLabel.h>
 #import <RichStyleLabel.h>
 #import <ZCAnimatedLabel.h>
+#import <APAudioPlayer/APAudioPlayer.h>
 
 #import "NSString+Extension.h"
 #import "UIColor+Hex.h"
@@ -42,6 +42,9 @@
 
 
 #import "MainViewController.h"
+#import "AppDelegate.h"
 
+
+#define App(s) AppDelegate * s = (AppDelegate *)[[UIApplication sharedApplication] delegate]
 
 #endif /* HPublic_h */

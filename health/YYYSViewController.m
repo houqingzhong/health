@@ -9,6 +9,7 @@
 #import "YYYSViewController.h"
 
 #import "HPublic.h"
+#import "YYCell.h"
 
 #define YYCellIdentifier  @"YYCellIdentifier"
 
@@ -44,8 +45,8 @@
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    _tableView.separatorColor = [UIColor greenMunsell];
+
     
     
     [_tableView anchorTopLeftWithLeftPadding:0 topPadding:0 width:CGRectGetWidth(self.view.frame) height:CGRectGetHeight(self.view.frame)];
@@ -54,7 +55,7 @@
     
     
     
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:YYCellIdentifier];
+    [_tableView registerClass:[YYCell class] forCellReuseIdentifier:YYCellIdentifier];
     
     
     
@@ -62,34 +63,39 @@
     
     
     NSMutableDictionary *dict = [NSMutableDictionary new];
-    dict[@"title"] = @"肝：五脏中的将军";
+    dict[@"title"] = @"养肝";
+    dict[@"sub_title"] = @"肝者，将军之官，谋虑出焉。";
     dict[@"html"] = @"yyys_liver";
-    dict[@"music"] = @"";
+    dict[@"mp3"] = @"胡笳十八拍.mp3";
     [_dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
-    dict[@"title"] = @"心：五脏中的君主";
+    dict[@"title"] = @"养心";
+    dict[@"sub_title"] = @"心者，君主之官也，神明出焉。";
     dict[@"html"] = @"yyys_heart";
-    dict[@"music"] = @"";
+    dict[@"mp3"] = @"紫竹调.mp3";
 
     [_dataArray addObject:dict];
 
     
     dict = [NSMutableDictionary new];
-    dict[@"title"] = @"脾：五脏中的后勤部长";
+    dict[@"title"] = @"养脾";
+    dict[@"sub_title"] = @"脾胃者，仓廪之官，五味出焉。";
     dict[@"html"] = @"yyys_spleen";
-    dict[@"music"] = @"";
+    dict[@"mp3"] = @"十面埋伏(琵琶曲).mp3";
     [_dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
-    dict[@"title"] = @"肺：五脏中的宰相";
+    dict[@"title"] = @"养肺";
+    dict[@"sub_title"] = @"肺者，相傅之官，治节出焉。";
     dict[@"html"] = @"yyys_lung";
-    dict[@"music"] = @"";
+    dict[@"mp3"] = @"阳春白雪.mp3";
     [_dataArray addObject:dict];
     dict = [NSMutableDictionary new];
-    dict[@"title"] = @"肾：五脏中的作强之官";
+    dict[@"title"] = @"养肾";
+    dict[@"sub_title"] = @"肾者，作强之官，伎巧出焉。";
     dict[@"html"] = @"yyys_kidney";
-    dict[@"music"] = @"";
+    dict[@"mp3"] = @"梅花三弄.mp3";
     [_dataArray addObject:dict];
     
     
@@ -115,14 +121,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YYCellIdentifier forIndexPath:indexPath];
+    YYCell *cell = [tableView dequeueReusableCellWithIdentifier:YYCellIdentifier forIndexPath:indexPath];
     
     if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:YYCellIdentifier];
+        cell = [[YYCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:YYCellIdentifier];
     }
-    
-    NSDictionary *dict = _dataArray[indexPath.row];
-    cell.textLabel.text =dict[@"title"];
+        
+    [cell setData:_dataArray[indexPath.row]];
     
     return cell;
     
@@ -131,7 +136,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 60*XA;
+    return [YYCell height:_dataArray[indexPath.row]];
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
@@ -151,17 +156,9 @@
     
     WebViewDetailController *wc = [WebViewDetailController new];
 
-    [wc loadHtml:dict[@"html"]];
+    [wc loadData:dict];
     
     [self.navigationController pushViewController:wc animated:YES];
 
-}
-
-
-- (void)introView
-{
-    IntroViewController *iv = [IntroViewController new];
-    [iv loadHtml:@"yyys"];
-    [self.navigationController pushViewController:iv animated:YES];
 }
 @end

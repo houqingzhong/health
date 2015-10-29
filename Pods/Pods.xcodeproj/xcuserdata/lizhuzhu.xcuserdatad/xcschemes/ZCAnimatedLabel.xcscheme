@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1C8A6052289EFB246C1F03E2'
+               BlueprintIdentifier = 'D73473E30461FA4A11F5478A'
                BlueprintName = 'ZCAnimatedLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libZCAnimatedLabel.a'>
