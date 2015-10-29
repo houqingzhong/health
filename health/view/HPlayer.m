@@ -90,8 +90,8 @@
     width = CGRectGetMaxX(self.frame) - ((left + _timeLeft.xMax) *2);
     [_progressView alignToTheRightOf:_timeLeft matchingCenterWithLeftPadding:left width:width height:height];
     
-    width = 60*XA;
-    height = 60*XA;
+    width = 80*XA;
+    height = 80*XA;
     
     [_playButtton alignUnder:_progressView withLeftPadding:20*XA topPadding:40*XA width:width height:height];
     
