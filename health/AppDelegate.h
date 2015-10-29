@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HPublic.h"
 
-@class APAudioPlayer;
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, APAudioPlayerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

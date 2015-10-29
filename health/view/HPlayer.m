@@ -105,6 +105,8 @@
     App(app);
     if ([app.dict[@"mp3"] isEqualToString:_dict[@"mp3"]]) {
         app.player.delegate = self;
+        [self scheduleProgressTimer];
+        [self updateTogglePlayButton];
     }
 
 
@@ -141,6 +143,9 @@
 
 - (void)dealloc
 {
+    App(app);
+    app.player.delegate = app;
+    
     [self unshceduleProgressTimer];
 }
 
@@ -230,8 +235,8 @@
 
 - (void)playerDidFinishPlaying:(APAudioPlayer *)player
 {
-    [self unshceduleProgressTimer];
     [self updateTogglePlayButton];
+    [player play];
 }
 
 

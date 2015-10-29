@@ -72,4 +72,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (void)playerDidFinishPlaying:(APAudioPlayer *)player
+{
+    [_player play];
+}
+
+
 @end
