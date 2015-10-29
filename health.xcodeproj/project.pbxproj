@@ -7,36 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D65B95E1BE217B100926244 /* yyys_spleen.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B95D1BE217B100926244 /* yyys_spleen.html */; };
+		1D65B9601BE2180000926244 /* yyys_lung.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B95F1BE2180000926244 /* yyys_lung.html */; };
+		1D65B9621BE2182700926244 /* yyys_kidney.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9611BE2182700926244 /* yyys_kidney.html */; };
+		1D65B9671BE224DA00926244 /* scys_html_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9661BE224DA00926244 /* scys_html_bg.png */; };
+		1D65B96A1BE22C8500926244 /* 紫竹调.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9691BE22C8500926244 /* 紫竹调.mp3 */; };
+		1D65B96C1BE22DFB00926244 /* 胡笳十八拍.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96B1BE22DFB00926244 /* 胡笳十八拍.mp3 */; };
+		1D65B96E1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96D1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 */; };
+		1D65B9701BE2306200926244 /* 阳春白雪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */; };
+		1D65B9721BE2330700926244 /* 梅花三弄.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9711BE2330700926244 /* 梅花三弄.mp3 */; };
 		C0F1FDD0876907098CDDD630 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F71D64658B9D73818BD77B0E /* libPods.a */; };
-		FF28B72C1BDCF4A60054C7B4 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72B1BDCF4A60054C7B4 /* HttpClient.m */; settings = {ASSET_TAGS = (); }; };
-		FF28B72F1BDD05330054C7B4 /* WeacherLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72E1BDD05330054C7B4 /* WeacherLabel.m */; settings = {ASSET_TAGS = (); }; };
-		FF28B7321BDD0F6A0054C7B4 /* HPublicMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B7311BDD0F6A0054C7B4 /* HPublicMethod.m */; settings = {ASSET_TAGS = (); }; };
-		FF28B7351BDD14420054C7B4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B7341BDD14420054C7B4 /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		FFA281BB1BDCE2270095539F /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281BA1BDCE2270095539F /* NSString+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		FFA281BE1BDCE3DC0095539F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281BD1BDCE3DC0095539F /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
-		FFA281C11BDCE6930095539F /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281C01BDCE6930095539F /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
-		FFA281C41BDCEB140095539F /* TimerHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281C31BDCEB140095539F /* TimerHeader.m */; settings = {ASSET_TAGS = (); }; };
+		FF28B72C1BDCF4A60054C7B4 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72B1BDCF4A60054C7B4 /* HttpClient.m */; };
+		FF28B72F1BDD05330054C7B4 /* WeacherLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72E1BDD05330054C7B4 /* WeacherLabel.m */; };
+		FF28B7321BDD0F6A0054C7B4 /* HPublicMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B7311BDD0F6A0054C7B4 /* HPublicMethod.m */; };
+		FF28B7351BDD14420054C7B4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B7341BDD14420054C7B4 /* DetailViewController.m */; };
+		FFA281BB1BDCE2270095539F /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281BA1BDCE2270095539F /* NSString+Extension.m */; };
+		FFA281BE1BDCE3DC0095539F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281BD1BDCE3DC0095539F /* MainViewController.m */; };
+		FFA281C11BDCE6930095539F /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281C01BDCE6930095539F /* UIColor+Hex.m */; };
+		FFA281C41BDCEB140095539F /* TimerHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281C31BDCEB140095539F /* TimerHeader.m */; };
 		FFC30B631BDCB52100D89D62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC30B621BDCB52100D89D62 /* main.m */; };
 		FFC30B661BDCB52100D89D62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC30B651BDCB52100D89D62 /* AppDelegate.m */; };
 		FFC30B691BDCB52100D89D62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC30B681BDCB52100D89D62 /* ViewController.m */; };
 		FFC30B6C1BDCB52100D89D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC30B6A1BDCB52100D89D62 /* Main.storyboard */; };
 		FFC30B6E1BDCB52100D89D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC30B6D1BDCB52100D89D62 /* Assets.xcassets */; };
 		FFC30B711BDCB52100D89D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC30B6F1BDCB52100D89D62 /* LaunchScreen.storyboard */; };
-		FFC30B7B1BDCB95100D89D62 /* HBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC30B7A1BDCB95100D89D62 /* HBaseCell.m */; settings = {ASSET_TAGS = (); }; };
-		FFC30B7E1BDCB98900D89D62 /* PeriodHealthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC30B7D1BDCB98900D89D62 /* PeriodHealthCell.m */; settings = {ASSET_TAGS = (); }; };
-		FFD8B99F1BE125CB0041EBE6 /* YYYSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B99E1BE125CB0041EBE6 /* YYYSViewController.m */; settings = {ASSET_TAGS = (); }; };
-		FFD8B9A21BE1271E0041EBE6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B9A11BE1271E0041EBE6 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		FFD8B9A51BE128CE0041EBE6 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B9A41BE128CE0041EBE6 /* IntroViewController.m */; settings = {ASSET_TAGS = (); }; };
-		FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */ = {isa = PBXBuildFile; fileRef = FFD8B9A71BE12A020041EBE6 /* yyys.html */; settings = {ASSET_TAGS = (); }; };
-		FFD8CCA31BE11A55006FBF8D /* SCYSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8CCA21BE11A55006FBF8D /* SCYSViewController.m */; settings = {ASSET_TAGS = (); }; };
-		FFDCC4911BE12DBF002CCAB9 /* scyy.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4901BE12DBF002CCAB9 /* scyy.html */; settings = {ASSET_TAGS = (); }; };
-		FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */; settings = {ASSET_TAGS = (); }; };
-		FFDCC4961BE1304B002CCAB9 /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4951BE1304B002CCAB9 /* WebViewDetailController.m */; settings = {ASSET_TAGS = (); }; };
-		FFDCC4981BE13304002CCAB9 /* yyys_gan.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4971BE13304002CCAB9 /* yyys_gan.html */; settings = {ASSET_TAGS = (); }; };
+		FFC30B7B1BDCB95100D89D62 /* HBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC30B7A1BDCB95100D89D62 /* HBaseCell.m */; };
+		FFC30B7E1BDCB98900D89D62 /* PeriodHealthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC30B7D1BDCB98900D89D62 /* PeriodHealthCell.m */; };
+		FFD8B99F1BE125CB0041EBE6 /* YYYSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B99E1BE125CB0041EBE6 /* YYYSViewController.m */; };
+		FFD8B9A21BE1271E0041EBE6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B9A11BE1271E0041EBE6 /* BaseViewController.m */; };
+		FFD8B9A51BE128CE0041EBE6 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B9A41BE128CE0041EBE6 /* IntroViewController.m */; };
+		FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */ = {isa = PBXBuildFile; fileRef = FFD8B9A71BE12A020041EBE6 /* yyys.html */; };
+		FFD8CCA31BE11A55006FBF8D /* SCYSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8CCA21BE11A55006FBF8D /* SCYSViewController.m */; };
+		FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4901BE12DBF002CCAB9 /* scys.html */; };
+		FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */; };
+		FFDCC4961BE1304B002CCAB9 /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4951BE1304B002CCAB9 /* WebViewDetailController.m */; };
+		FFDCC4981BE13304002CCAB9 /* yyys_liver.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4971BE13304002CCAB9 /* yyys_liver.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C59895F6647A2FA57E6C1FF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1D65B95D1BE217B100926244 /* yyys_spleen.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_spleen.html; sourceTree = "<group>"; };
+		1D65B95F1BE2180000926244 /* yyys_lung.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_lung.html; sourceTree = "<group>"; };
+		1D65B9611BE2182700926244 /* yyys_kidney.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_kidney.html; sourceTree = "<group>"; };
+		1D65B9661BE224DA00926244 /* scys_html_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scys_html_bg.png; sourceTree = "<group>"; };
+		1D65B9691BE22C8500926244 /* 紫竹调.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "紫竹调.mp3"; sourceTree = "<group>"; };
+		1D65B96B1BE22DFB00926244 /* 胡笳十八拍.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "胡笳十八拍.mp3"; sourceTree = "<group>"; };
+		1D65B96D1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "十面埋伏(琵琶曲).mp3"; sourceTree = "<group>"; };
+		1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "阳春白雪.mp3"; sourceTree = "<group>"; };
+		1D65B9711BE2330700926244 /* 梅花三弄.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "梅花三弄.mp3"; sourceTree = "<group>"; };
 		399DFCCFE63ACE241A2D3D6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F71D64658B9D73818BD77B0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF28B72A1BDCF4A60054C7B4 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -79,11 +97,11 @@
 		FFD8B9A71BE12A020041EBE6 /* yyys.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys.html; sourceTree = "<group>"; };
 		FFD8CCA11BE11A55006FBF8D /* SCYSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYSViewController.h; sourceTree = "<group>"; };
 		FFD8CCA21BE11A55006FBF8D /* SCYSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYSViewController.m; sourceTree = "<group>"; };
-		FFDCC4901BE12DBF002CCAB9 /* scyy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scyy.html; sourceTree = "<group>"; };
+		FFDCC4901BE12DBF002CCAB9 /* scys.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys.html; sourceTree = "<group>"; };
 		FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_heart.html; sourceTree = "<group>"; };
 		FFDCC4941BE1304B002CCAB9 /* WebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDetailController.h; sourceTree = "<group>"; };
 		FFDCC4951BE1304B002CCAB9 /* WebViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDetailController.m; sourceTree = "<group>"; };
-		FFDCC4971BE13304002CCAB9 /* yyys_gan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_gan.html; sourceTree = "<group>"; };
+		FFDCC4971BE13304002CCAB9 /* yyys_liver.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_liver.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,10 +226,19 @@
 		FFD8B9A61BE129F50041EBE6 /* html */ = {
 			isa = PBXGroup;
 			children = (
+				1D65B9711BE2330700926244 /* 梅花三弄.mp3 */,
+				1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */,
+				1D65B96D1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 */,
+				1D65B96B1BE22DFB00926244 /* 胡笳十八拍.mp3 */,
+				1D65B9691BE22C8500926244 /* 紫竹调.mp3 */,
+				1D65B9661BE224DA00926244 /* scys_html_bg.png */,
 				FFD8B9A71BE12A020041EBE6 /* yyys.html */,
-				FFDCC4901BE12DBF002CCAB9 /* scyy.html */,
+				FFDCC4901BE12DBF002CCAB9 /* scys.html */,
 				FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */,
-				FFDCC4971BE13304002CCAB9 /* yyys_gan.html */,
+				FFDCC4971BE13304002CCAB9 /* yyys_liver.html */,
+				1D65B95D1BE217B100926244 /* yyys_spleen.html */,
+				1D65B95F1BE2180000926244 /* yyys_lung.html */,
+				1D65B9611BE2182700926244 /* yyys_kidney.html */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -227,7 +254,6 @@
 				FFC30B5A1BDCB52100D89D62 /* Sources */,
 				FFC30B5B1BDCB52100D89D62 /* Frameworks */,
 				FFC30B5C1BDCB52100D89D62 /* Resources */,
-				C5D970665D202A905D9200F5 /* Embed Pods Frameworks */,
 				50A0CD785E0C7B992CB1D167 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -250,6 +276,11 @@
 				TargetAttributes = {
 					FFC30B5D1BDCB52100D89D62 = {
 						CreatedOnToolsVersion = 7.0.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -277,12 +308,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFC30B711BDCB52100D89D62 /* LaunchScreen.storyboard in Resources */,
-				FFDCC4981BE13304002CCAB9 /* yyys_gan.html in Resources */,
+				FFDCC4981BE13304002CCAB9 /* yyys_liver.html in Resources */,
+				1D65B96A1BE22C8500926244 /* 紫竹调.mp3 in Resources */,
+				1D65B9621BE2182700926244 /* yyys_kidney.html in Resources */,
+				1D65B9671BE224DA00926244 /* scys_html_bg.png in Resources */,
+				1D65B9601BE2180000926244 /* yyys_lung.html in Resources */,
+				1D65B96E1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 in Resources */,
+				1D65B9701BE2306200926244 /* 阳春白雪.mp3 in Resources */,
 				FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */,
-				FFDCC4911BE12DBF002CCAB9 /* scyy.html in Resources */,
+				1D65B9721BE2330700926244 /* 梅花三弄.mp3 in Resources */,
+				FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */,
 				FFC30B6E1BDCB52100D89D62 /* Assets.xcassets in Resources */,
+				1D65B95E1BE217B100926244 /* yyys_spleen.html in Resources */,
 				FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */,
 				FFC30B6C1BDCB52100D89D62 /* Main.storyboard in Resources */,
+				1D65B96C1BE22DFB00926244 /* 胡笳十八拍.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,21 +357,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C5D970665D202A905D9200F5 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

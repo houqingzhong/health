@@ -59,9 +59,24 @@
     
     _dataArray = [NSMutableArray new];
     
-    [_dataArray addObject:@""];
-    [_dataArray addObject:@""];
-    [_dataArray addObject:@""];
+    
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    dict[@"title"] = @"时辰养生";
+    dict[@"icon"] = @"shichen";
+    [_dataArray addObject:dict];
+    
+    dict = [NSMutableDictionary new];
+    dict[@"title"] = @"音乐养生";
+    dict[@"icon"] = @"yinyue";
+
+    [_dataArray addObject:dict];
+    
+    
+//    dict = [NSMutableDictionary new];
+//    dict[@"title"] = @"经络养生";
+//    dict[@"icon"] = @"yinyue";
+    
+    [_dataArray addObject:dict];
     
     
     
@@ -91,20 +106,14 @@
     
     if (nil == cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MainCellIdentifier];
+        
+        [cell.imageView anchorCenterLeftWithLeftPadding:20*XA width:60*XA height:60*XA];
     }
     
-    if (0 == indexPath.row) {
-        cell.imageView.image = [UIImage imageNamed:@"shichen"];
-        cell.textLabel.text = @"时辰养生";
-    }
-    else if(1 == indexPath.row)
-    {
-        cell.textLabel.text = @"经络养生";
-    }
-    else if (2 == indexPath.row)
-    {
-        cell.textLabel.text = @"音乐养生";
-    }
+    NSDictionary *dict = _dataArray[indexPath.row];
+
+    cell.imageView.image = [UIImage imageNamed:dict[@"icon"]];
+    cell.textLabel.text = dict[@"title"];
 
     return cell;
     
@@ -130,17 +139,16 @@
 - (void)jumpToViewController:(NSIndexPath *)indexPath
 {
 
-    if (0 == indexPath.row) {
-     
+    if (0 == indexPath.row)
+    {
         [self.navigationController pushViewController:[SCYSViewController new] animated:YES];
     }
     else if (1 == indexPath.row)
     {
-        
+        [self.navigationController pushViewController:[YYYSViewController new] animated:YES];
     }
     else if (2 == indexPath.row) {
         
-        [self.navigationController pushViewController:[YYYSViewController new] animated:YES];
     }
     else if (3 == indexPath.row)
     {

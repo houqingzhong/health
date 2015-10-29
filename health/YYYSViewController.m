@@ -60,16 +60,35 @@
     
     _dataArray = [NSMutableArray new];
     
+    
     NSMutableDictionary *dict = [NSMutableDictionary new];
-    dict[@"title"] = @"心：五脏中的君主";
-    dict[@"html"] = @"yyys_heart.html";
+    dict[@"title"] = @"肝：五脏中的将军";
+    dict[@"html"] = @"yyys_liver";
     dict[@"music"] = @"";
-
     [_dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
-    dict[@"title"] = @"肝：五脏中的将军";
-    dict[@"html"] = @"yyys_heart.html";
+    dict[@"title"] = @"心：五脏中的君主";
+    dict[@"html"] = @"yyys_heart";
+    dict[@"music"] = @"";
+
+    [_dataArray addObject:dict];
+
+    
+    dict = [NSMutableDictionary new];
+    dict[@"title"] = @"脾：五脏中的后勤部长";
+    dict[@"html"] = @"yyys_spleen";
+    dict[@"music"] = @"";
+    [_dataArray addObject:dict];
+    
+    dict = [NSMutableDictionary new];
+    dict[@"title"] = @"肺：五脏中的宰相";
+    dict[@"html"] = @"yyys_lung";
+    dict[@"music"] = @"";
+    [_dataArray addObject:dict];
+    dict = [NSMutableDictionary new];
+    dict[@"title"] = @"肾：五脏中的作强之官";
+    dict[@"html"] = @"yyys_kidney";
     dict[@"music"] = @"";
     [_dataArray addObject:dict];
     
@@ -132,14 +151,7 @@
     
     WebViewDetailController *wc = [WebViewDetailController new];
 
-    if (0 == indexPath.row) {
-        [wc loadHtml:@"yyys_heart"];
-    }
-    else if(1 == indexPath.row)
-    {
-        [wc loadHtml:@"yyys_gan"];
-    }
-        
+    [wc loadHtml:dict[@"html"]];
     
     [self.navigationController pushViewController:wc animated:YES];
 
@@ -148,9 +160,8 @@
 
 - (void)introView
 {
-    
     IntroViewController *iv = [IntroViewController new];
-    [iv loadHtml];
+    [iv loadHtml:@"yyys"];
     [self.navigationController pushViewController:iv animated:YES];
 }
 @end

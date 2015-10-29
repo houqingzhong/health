@@ -36,9 +36,9 @@
     _webView.frame = self.view.bounds;
 }
 
-- (void)loadHtml
+- (void)loadHtml:(NSString *)fileName
 {
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"yyys" ofType:@"html"];
+    NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"html"];
     NSURL* url = [NSURL fileURLWithPath:path];
     NSURLRequest* request = [NSURLRequest requestWithURL:url] ;
     [_webView loadRequest:request];

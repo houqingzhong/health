@@ -22,6 +22,26 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<true/>
+	<key>SmileWeather</key>
+	<dict>
+		<key>API_KEY_openweathermap</key>
+		<string>c7875895c8fd3d59ccb67122d3064053</string>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Climacons.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -34,22 +54,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>SmileWeather</key>
-	<dict>
-		<key>API_KEY_openweathermap</key>
-		<string>c7875895c8fd3d59ccb67122d3064053</string>
-	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Climacons.ttf</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<true/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

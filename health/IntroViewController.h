@@ -10,6 +10,6 @@
 
 @interface IntroViewController : UIViewController
 
-- (void)loadHtml;
+- (void)loadHtml:(NSString *)fileName;
 
 @end
