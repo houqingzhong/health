@@ -1,0 +1,1 @@
+../../../AGLocationDispatcher/Pod/Classes/AGBackgroundLocationDispatcher.h

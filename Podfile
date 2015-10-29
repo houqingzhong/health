@@ -1,0 +1,12 @@
+platform :ios, '7.0'
+pod 'Facade', '~> 1.1.0'
+pod 'UIColor-MoreColors', '~> 1.1.0'
+pod 'UILabel+ContentSize', '~> 1.0.3'
+pod "AFNetworking", "~> 2.0"
+pod 'JSONKit-NoWarning', '~> 1.2'
+pod 'SmileWeather', '~> 0.1.4'
+pod 'AGLocationDispatcher', '~> 0.0.7.2'
+pod 'TTTAttributedLabel', '~> 1.13.4'
+pod 'RichStyleLabel', '~> 0.0.1'
+pod 'ZCAnimatedLabel', '~> 0.0.3'
+pod 'MZClockView', '~> 1.0.2'

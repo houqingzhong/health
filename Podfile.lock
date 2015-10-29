@@ -1,0 +1,61 @@
+PODS:
+  - AFNetworking (2.6.1):
+    - AFNetworking/NSURLConnection (= 2.6.1)
+    - AFNetworking/NSURLSession (= 2.6.1)
+    - AFNetworking/Reachability (= 2.6.1)
+    - AFNetworking/Security (= 2.6.1)
+    - AFNetworking/Serialization (= 2.6.1)
+    - AFNetworking/UIKit (= 2.6.1)
+  - AFNetworking/NSURLConnection (2.6.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.1)
+  - AFNetworking/Security (2.6.1)
+  - AFNetworking/Serialization (2.6.1)
+  - AFNetworking/UIKit (2.6.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AGLocationDispatcher (0.0.7.2):
+    - AFNetworking (~> 2.3)
+  - Facade (1.1.0)
+  - JSONKit-NoWarning (1.2)
+  - MZClockView (1.0.2)
+  - RichStyleLabel (0.0.1)
+  - SmileWeather (0.1.4)
+  - TTTAttributedLabel (1.13.4)
+  - UIColor-MoreColors (1.1.0)
+  - UILabel+ContentSize (1.0.3)
+  - ZCAnimatedLabel (0.0.3)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - AGLocationDispatcher (~> 0.0.7.2)
+  - Facade (~> 1.1.0)
+  - JSONKit-NoWarning (~> 1.2)
+  - MZClockView (~> 1.0.2)
+  - RichStyleLabel (~> 0.0.1)
+  - SmileWeather (~> 0.1.4)
+  - TTTAttributedLabel (~> 1.13.4)
+  - UIColor-MoreColors (~> 1.1.0)
+  - UILabel+ContentSize (~> 1.0.3)
+  - ZCAnimatedLabel (~> 0.0.3)
+
+SPEC CHECKSUMS:
+  AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
+  AGLocationDispatcher: cd4d05f41ac6b4c05df1dfb89b7e37c2b8d480f4
+  Facade: 509c4a0e5fa8517d5e0e1e47251b520775904a9a
+  JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
+  MZClockView: dccbcd768ddeeb661cfd0dfe1772c32b05f39a6c
+  RichStyleLabel: 7b9f80a4fcf4a9b3c6b3b2ba2805d53b4f4912cc
+  SmileWeather: 91f86b925f725997144b7eedcf5a5fc719258a43
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  UIColor-MoreColors: 66b65dcd322602ccd4d8064037a1ca0b4bb6acb2
+  UILabel+ContentSize: ca71fe5d87afd752e53a34466e52598d65db4705
+  ZCAnimatedLabel: 8212da1d26db90eaac3848fd29415b56ef56dcd6
+
+COCOAPODS: 0.39.0
