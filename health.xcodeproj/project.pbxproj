@@ -17,6 +17,17 @@
 		1D65B9701BE2306200926244 /* 阳春白雪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */; };
 		1D65B9721BE2330700926244 /* 梅花三弄.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9711BE2330700926244 /* 梅花三弄.mp3 */; };
 		1D65B9741BE237C600926244 /* scys_zishi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9731BE237C600926244 /* scys_zishi.html */; };
+		1D65B9761BE2397800926244 /* scys_choushi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9751BE2397800926244 /* scys_choushi.html */; };
+		1D65B9781BE239E600926244 /* scys_yinshi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9771BE239E600926244 /* scys_yinshi.html */; };
+		1D65B97A1BE239F500926244 /* scys_maoshi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9791BE239F500926244 /* scys_maoshi.html */; };
+		1D65B97C1BE23A0400926244 /* scys_chenshi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B97B1BE23A0400926244 /* scys_chenshi.html */; };
+		1D65B97E1BE23A1000926244 /* scys_sishi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B97D1BE23A1000926244 /* scys_sishi.html */; };
+		1D65B9801BE23A1A00926244 /* scys_wushi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B97F1BE23A1A00926244 /* scys_wushi.html */; };
+		1D65B9821BE23A2300926244 /* scys_weishi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9811BE23A2300926244 /* scys_weishi.html */; };
+		1D65B9841BE23A2F00926244 /* scys_shenshi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9831BE23A2F00926244 /* scys_shenshi.html */; };
+		1D65B9861BE23A3900926244 /* scys_youshi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9851BE23A3900926244 /* scys_youshi.html */; };
+		1D65B9881BE23A4300926244 /* scys_xushi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9871BE23A4300926244 /* scys_xushi.html */; };
+		1D65B98A1BE23A4E00926244 /* scys_haishi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9891BE23A4E00926244 /* scys_haishi.html */; };
 		C0F1FDD0876907098CDDD630 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F71D64658B9D73818BD77B0E /* libPods.a */; };
 		FF28B72C1BDCF4A60054C7B4 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72B1BDCF4A60054C7B4 /* HttpClient.m */; };
 		FF28B72F1BDD05330054C7B4 /* WeacherLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72E1BDD05330054C7B4 /* WeacherLabel.m */; };
@@ -57,6 +68,17 @@
 		1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "阳春白雪.mp3"; sourceTree = "<group>"; };
 		1D65B9711BE2330700926244 /* 梅花三弄.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "梅花三弄.mp3"; sourceTree = "<group>"; };
 		1D65B9731BE237C600926244 /* scys_zishi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_zishi.html; sourceTree = "<group>"; };
+		1D65B9751BE2397800926244 /* scys_choushi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_choushi.html; sourceTree = "<group>"; };
+		1D65B9771BE239E600926244 /* scys_yinshi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_yinshi.html; sourceTree = "<group>"; };
+		1D65B9791BE239F500926244 /* scys_maoshi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_maoshi.html; sourceTree = "<group>"; };
+		1D65B97B1BE23A0400926244 /* scys_chenshi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_chenshi.html; sourceTree = "<group>"; };
+		1D65B97D1BE23A1000926244 /* scys_sishi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_sishi.html; sourceTree = "<group>"; };
+		1D65B97F1BE23A1A00926244 /* scys_wushi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_wushi.html; sourceTree = "<group>"; };
+		1D65B9811BE23A2300926244 /* scys_weishi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_weishi.html; sourceTree = "<group>"; };
+		1D65B9831BE23A2F00926244 /* scys_shenshi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_shenshi.html; sourceTree = "<group>"; };
+		1D65B9851BE23A3900926244 /* scys_youshi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_youshi.html; sourceTree = "<group>"; };
+		1D65B9871BE23A4300926244 /* scys_xushi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_xushi.html; sourceTree = "<group>"; };
+		1D65B9891BE23A4E00926244 /* scys_haishi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_haishi.html; sourceTree = "<group>"; };
 		399DFCCFE63ACE241A2D3D6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F71D64658B9D73818BD77B0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF28B72A1BDCF4A60054C7B4 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -242,6 +264,17 @@
 				1D65B95F1BE2180000926244 /* yyys_lung.html */,
 				1D65B9611BE2182700926244 /* yyys_kidney.html */,
 				1D65B9731BE237C600926244 /* scys_zishi.html */,
+				1D65B9751BE2397800926244 /* scys_choushi.html */,
+				1D65B9771BE239E600926244 /* scys_yinshi.html */,
+				1D65B9791BE239F500926244 /* scys_maoshi.html */,
+				1D65B97B1BE23A0400926244 /* scys_chenshi.html */,
+				1D65B97D1BE23A1000926244 /* scys_sishi.html */,
+				1D65B97F1BE23A1A00926244 /* scys_wushi.html */,
+				1D65B9811BE23A2300926244 /* scys_weishi.html */,
+				1D65B9831BE23A2F00926244 /* scys_shenshi.html */,
+				1D65B9851BE23A3900926244 /* scys_youshi.html */,
+				1D65B9871BE23A4300926244 /* scys_xushi.html */,
+				1D65B9891BE23A4E00926244 /* scys_haishi.html */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -314,19 +347,30 @@
 				FFDCC4981BE13304002CCAB9 /* yyys_liver.html in Resources */,
 				1D65B96A1BE22C8500926244 /* 紫竹调.mp3 in Resources */,
 				1D65B9621BE2182700926244 /* yyys_kidney.html in Resources */,
+				1D65B9841BE23A2F00926244 /* scys_shenshi.html in Resources */,
 				1D65B9671BE224DA00926244 /* scys_html_bg.png in Resources */,
 				1D65B9601BE2180000926244 /* yyys_lung.html in Resources */,
 				1D65B96E1BE22FC500926244 /* 十面埋伏(琵琶曲).mp3 in Resources */,
 				1D65B9741BE237C600926244 /* scys_zishi.html in Resources */,
+				1D65B9781BE239E600926244 /* scys_yinshi.html in Resources */,
+				1D65B97A1BE239F500926244 /* scys_maoshi.html in Resources */,
+				1D65B97C1BE23A0400926244 /* scys_chenshi.html in Resources */,
+				1D65B9801BE23A1A00926244 /* scys_wushi.html in Resources */,
 				1D65B9701BE2306200926244 /* 阳春白雪.mp3 in Resources */,
+				1D65B98A1BE23A4E00926244 /* scys_haishi.html in Resources */,
 				FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */,
 				1D65B9721BE2330700926244 /* 梅花三弄.mp3 in Resources */,
 				FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */,
+				1D65B9861BE23A3900926244 /* scys_youshi.html in Resources */,
+				1D65B97E1BE23A1000926244 /* scys_sishi.html in Resources */,
 				FFC30B6E1BDCB52100D89D62 /* Assets.xcassets in Resources */,
 				1D65B95E1BE217B100926244 /* yyys_spleen.html in Resources */,
+				1D65B9761BE2397800926244 /* scys_choushi.html in Resources */,
 				FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */,
+				1D65B9821BE23A2300926244 /* scys_weishi.html in Resources */,
 				FFC30B6C1BDCB52100D89D62 /* Main.storyboard in Resources */,
 				1D65B96C1BE22DFB00926244 /* 胡笳十八拍.mp3 in Resources */,
+				1D65B9881BE23A4300926244 /* scys_xushi.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
