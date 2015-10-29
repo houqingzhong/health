@@ -11,9 +11,6 @@
 		1D65B9601BE2180000926244 /* yyys_lung.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B95F1BE2180000926244 /* yyys_lung.html */; };
 		1D65B9621BE2182700926244 /* yyys_kidney.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9611BE2182700926244 /* yyys_kidney.html */; };
 		1D65B9671BE224DA00926244 /* scys_html_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9661BE224DA00926244 /* scys_html_bg.png */; };
-		1D65B96A1BE22C8500926244 /* 紫竹调.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9691BE22C8500926244 /* 紫竹调.mp3 */; };
-		1D65B96C1BE22DFB00926244 /* 胡笳十八拍.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96B1BE22DFB00926244 /* 胡笳十八拍.mp3 */; };
-		1D65B9701BE2306200926244 /* 阳春白雪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */; };
 		1D65B9741BE237C600926244 /* scys_zishi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9731BE237C600926244 /* scys_zishi.html */; };
 		1D65B9761BE2397800926244 /* scys_choushi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9751BE2397800926244 /* scys_choushi.html */; };
 		1D65B9781BE239E600926244 /* scys_yinshi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9771BE239E600926244 /* scys_yinshi.html */; };
@@ -48,13 +45,29 @@
 		FFD8B9A51BE128CE0041EBE6 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B9A41BE128CE0041EBE6 /* IntroViewController.m */; };
 		FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */ = {isa = PBXBuildFile; fileRef = FFD8B9A71BE12A020041EBE6 /* yyys.html */; };
 		FFD8CCA31BE11A55006FBF8D /* SCYSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8CCA21BE11A55006FBF8D /* SCYSViewController.m */; };
-		FFDA633E1BE2D94C00CF80B6 /* 梅花三弄.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633D1BE2D85300CF80B6 /* 梅花三弄.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA633F1BE2D94F00CF80B6 /* 十面埋伏.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633C1BE2D77B00CF80B6 /* 十面埋伏.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63401BE2D95200CF80B6 /* 潇湘水云.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63421BE2DA4E00CF80B6 /* 山居吟.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63411BE2DA4E00CF80B6 /* 山居吟.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63441BE2DA9400CF80B6 /* 洞庭秋思.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63431BE2DA9400CF80B6 /* 洞庭秋思.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63461BE2DAFC00CF80B6 /* 高山流水.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63451BE2DAFC00CF80B6 /* 高山流水.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63481BE2DB8F00CF80B6 /* 阳春白雪.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63471BE2DB8F00CF80B6 /* 阳春白雪.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA635F1BE2E05800CF80B6 /* 文王操.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA635D1BE2E04D00CF80B6 /* 文王操.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63601BE2E05800CF80B6 /* 高山.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA635B1BE2DF9900CF80B6 /* 高山.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63611BE2E05800CF80B6 /* 鹤鸣九皋.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63591BE2DF3900CF80B6 /* 鹤鸣九皋.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63621BE2E05800CF80B6 /* 流水.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63571BE2DEDF00CF80B6 /* 流水.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63631BE2E05800CF80B6 /* 长清.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63551BE2DE5C00CF80B6 /* 长清.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63641BE2E05800CF80B6 /* 白雪.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63531BE2DDFE00CF80B6 /* 白雪.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63651BE2E05800CF80B6 /* 阳春.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63511BE2DD7A00CF80B6 /* 阳春.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63661BE2E05800CF80B6 /* 庄周梦蝶.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA634F1BE2DCFD00CF80B6 /* 庄周梦蝶.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63671BE2E05800CF80B6 /* 列子御风.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA634D1BE2DCBD00CF80B6 /* 列子御风.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63681BE2E05800CF80B6 /* 雉朝飞.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFDA634B1BE2DC4200CF80B6 /* 雉朝飞.mp3 */; settings = {ASSET_TAGS = (); }; };
+		FFDA63691BE2E05800CF80B6 /* 乌夜啼.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63491BE2DBF500CF80B6 /* 乌夜啼.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA636A1BE2E05800CF80B6 /* 阳春白雪.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63471BE2DB8F00CF80B6 /* 阳春白雪.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA636B1BE2E05800CF80B6 /* 高山流水.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63451BE2DAFC00CF80B6 /* 高山流水.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA636C1BE2E05800CF80B6 /* 洞庭秋思.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63431BE2DA9400CF80B6 /* 洞庭秋思.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA636D1BE2E05800CF80B6 /* 山居吟.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63411BE2DA4E00CF80B6 /* 山居吟.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA636E1BE2E05800CF80B6 /* 梅花三弄.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633D1BE2D85300CF80B6 /* 梅花三弄.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA636F1BE2E05800CF80B6 /* 十面埋伏.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633C1BE2D77B00CF80B6 /* 十面埋伏.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63701BE2E05800CF80B6 /* 潇湘水云.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63711BE2E05800CF80B6 /* 阳春白雪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */; settings = {ASSET_TAGS = (); }; };
+		FFDA63721BE2E05800CF80B6 /* 胡笳十八拍.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96B1BE22DFB00926244 /* 胡笳十八拍.mp3 */; settings = {ASSET_TAGS = (); }; };
+		FFDA63731BE2E05800CF80B6 /* 紫竹调.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9691BE22C8500926244 /* 紫竹调.mp3 */; settings = {ASSET_TAGS = (); }; };
+		FFDA63751BE2E10400CF80B6 /* 平沙落雁.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63741BE2E10400CF80B6 /* 平沙落雁.m4a */; settings = {ASSET_TAGS = (); }; };
+		FFDA63771BE2E14F00CF80B6 /* 忆故人.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63761BE2E14F00CF80B6 /* 忆故人.mp3 */; settings = {ASSET_TAGS = (); }; };
 		FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4901BE12DBF002CCAB9 /* scys.html */; };
 		FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */; };
 		FFDCC4961BE1304B002CCAB9 /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4951BE1304B002CCAB9 /* WebViewDetailController.m */; };
@@ -134,6 +147,19 @@
 		FFDA63431BE2DA9400CF80B6 /* 洞庭秋思.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "洞庭秋思.m4a"; sourceTree = "<group>"; };
 		FFDA63451BE2DAFC00CF80B6 /* 高山流水.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "高山流水.m4a"; sourceTree = "<group>"; };
 		FFDA63471BE2DB8F00CF80B6 /* 阳春白雪.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "阳春白雪.m4a"; sourceTree = "<group>"; };
+		FFDA63491BE2DBF500CF80B6 /* 乌夜啼.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "乌夜啼.m4a"; sourceTree = "<group>"; };
+		FFDA634B1BE2DC4200CF80B6 /* 雉朝飞.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "雉朝飞.mp3"; sourceTree = "<group>"; };
+		FFDA634D1BE2DCBD00CF80B6 /* 列子御风.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "列子御风.m4a"; sourceTree = "<group>"; };
+		FFDA634F1BE2DCFD00CF80B6 /* 庄周梦蝶.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "庄周梦蝶.m4a"; sourceTree = "<group>"; };
+		FFDA63511BE2DD7A00CF80B6 /* 阳春.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "阳春.m4a"; sourceTree = "<group>"; };
+		FFDA63531BE2DDFE00CF80B6 /* 白雪.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "白雪.m4a"; sourceTree = "<group>"; };
+		FFDA63551BE2DE5C00CF80B6 /* 长清.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "长清.m4a"; sourceTree = "<group>"; };
+		FFDA63571BE2DEDF00CF80B6 /* 流水.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "流水.m4a"; sourceTree = "<group>"; };
+		FFDA63591BE2DF3900CF80B6 /* 鹤鸣九皋.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "鹤鸣九皋.m4a"; sourceTree = "<group>"; };
+		FFDA635B1BE2DF9900CF80B6 /* 高山.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "高山.m4a"; sourceTree = "<group>"; };
+		FFDA635D1BE2E04D00CF80B6 /* 文王操.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "文王操.m4a"; sourceTree = "<group>"; };
+		FFDA63741BE2E10400CF80B6 /* 平沙落雁.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "平沙落雁.m4a"; sourceTree = "<group>"; };
+		FFDA63761BE2E14F00CF80B6 /* 忆故人.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "忆故人.mp3"; sourceTree = "<group>"; };
 		FFDCC4901BE12DBF002CCAB9 /* scys.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys.html; sourceTree = "<group>"; };
 		FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_heart.html; sourceTree = "<group>"; };
 		FFDCC4941BE1304B002CCAB9 /* WebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDetailController.h; sourceTree = "<group>"; };
@@ -275,6 +301,19 @@
 		FFD8B9A61BE129F50041EBE6 /* html */ = {
 			isa = PBXGroup;
 			children = (
+				FFDA63761BE2E14F00CF80B6 /* 忆故人.mp3 */,
+				FFDA63741BE2E10400CF80B6 /* 平沙落雁.m4a */,
+				FFDA635D1BE2E04D00CF80B6 /* 文王操.m4a */,
+				FFDA635B1BE2DF9900CF80B6 /* 高山.m4a */,
+				FFDA63591BE2DF3900CF80B6 /* 鹤鸣九皋.m4a */,
+				FFDA63571BE2DEDF00CF80B6 /* 流水.m4a */,
+				FFDA63551BE2DE5C00CF80B6 /* 长清.m4a */,
+				FFDA63531BE2DDFE00CF80B6 /* 白雪.m4a */,
+				FFDA63511BE2DD7A00CF80B6 /* 阳春.m4a */,
+				FFDA634F1BE2DCFD00CF80B6 /* 庄周梦蝶.m4a */,
+				FFDA634D1BE2DCBD00CF80B6 /* 列子御风.m4a */,
+				FFDA634B1BE2DC4200CF80B6 /* 雉朝飞.mp3 */,
+				FFDA63491BE2DBF500CF80B6 /* 乌夜啼.m4a */,
 				FFDA63471BE2DB8F00CF80B6 /* 阳春白雪.m4a */,
 				FFDA63451BE2DAFC00CF80B6 /* 高山流水.m4a */,
 				FFDA63431BE2DA9400CF80B6 /* 洞庭秋思.m4a */,
@@ -374,38 +413,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDA63651BE2E05800CF80B6 /* 阳春.m4a in Resources */,
 				FFC30B711BDCB52100D89D62 /* LaunchScreen.storyboard in Resources */,
 				FFDCC4981BE13304002CCAB9 /* yyys_liver.html in Resources */,
-				1D65B96A1BE22C8500926244 /* 紫竹调.mp3 in Resources */,
 				1D65B9621BE2182700926244 /* yyys_kidney.html in Resources */,
+				FFDA636E1BE2E05800CF80B6 /* 梅花三弄.m4a in Resources */,
 				1D65B9841BE23A2F00926244 /* scys_shenshi.html in Resources */,
 				1D65B9671BE224DA00926244 /* scys_html_bg.png in Resources */,
 				1D65B9601BE2180000926244 /* yyys_lung.html in Resources */,
+				FFDA635F1BE2E05800CF80B6 /* 文王操.m4a in Resources */,
 				1D65B9741BE237C600926244 /* scys_zishi.html in Resources */,
+				FFDA63681BE2E05800CF80B6 /* 雉朝飞.mp3 in Resources */,
 				1D65B9781BE239E600926244 /* scys_yinshi.html in Resources */,
 				1D65B97A1BE239F500926244 /* scys_maoshi.html in Resources */,
+				FFDA63631BE2E05800CF80B6 /* 长清.m4a in Resources */,
 				1D65B97C1BE23A0400926244 /* scys_chenshi.html in Resources */,
-				FFDA63441BE2DA9400CF80B6 /* 洞庭秋思.m4a in Resources */,
+				FFDA636B1BE2E05800CF80B6 /* 高山流水.m4a in Resources */,
+				FFDA636A1BE2E05800CF80B6 /* 阳春白雪.m4a in Resources */,
 				1D65B9801BE23A1A00926244 /* scys_wushi.html in Resources */,
-				FFDA63421BE2DA4E00CF80B6 /* 山居吟.m4a in Resources */,
-				1D65B9701BE2306200926244 /* 阳春白雪.mp3 in Resources */,
-				FFDA63401BE2D95200CF80B6 /* 潇湘水云.m4a in Resources */,
+				FFDA63671BE2E05800CF80B6 /* 列子御风.m4a in Resources */,
 				1D65B98A1BE23A4E00926244 /* scys_haishi.html in Resources */,
+				FFDA63731BE2E05800CF80B6 /* 紫竹调.mp3 in Resources */,
+				FFDA63661BE2E05800CF80B6 /* 庄周梦蝶.m4a in Resources */,
+				FFDA63701BE2E05800CF80B6 /* 潇湘水云.m4a in Resources */,
+				FFDA636D1BE2E05800CF80B6 /* 山居吟.m4a in Resources */,
+				FFDA63641BE2E05800CF80B6 /* 白雪.m4a in Resources */,
 				FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */,
 				FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */,
-				FFDA633E1BE2D94C00CF80B6 /* 梅花三弄.m4a in Resources */,
+				FFDA63601BE2E05800CF80B6 /* 高山.m4a in Resources */,
 				1D65B9861BE23A3900926244 /* scys_youshi.html in Resources */,
+				FFDA63611BE2E05800CF80B6 /* 鹤鸣九皋.m4a in Resources */,
+				FFDA63771BE2E14F00CF80B6 /* 忆故人.mp3 in Resources */,
 				1D65B97E1BE23A1000926244 /* scys_sishi.html in Resources */,
-				FFDA63461BE2DAFC00CF80B6 /* 高山流水.m4a in Resources */,
+				FFDA63621BE2E05800CF80B6 /* 流水.m4a in Resources */,
+				FFDA63711BE2E05800CF80B6 /* 阳春白雪.mp3 in Resources */,
 				FFC30B6E1BDCB52100D89D62 /* Assets.xcassets in Resources */,
+				FFDA63691BE2E05800CF80B6 /* 乌夜啼.m4a in Resources */,
+				FFDA63721BE2E05800CF80B6 /* 胡笳十八拍.mp3 in Resources */,
 				1D65B95E1BE217B100926244 /* yyys_spleen.html in Resources */,
+				FFDA636C1BE2E05800CF80B6 /* 洞庭秋思.m4a in Resources */,
 				1D65B9761BE2397800926244 /* scys_choushi.html in Resources */,
 				FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */,
 				1D65B9821BE23A2300926244 /* scys_weishi.html in Resources */,
+				FFDA63751BE2E10400CF80B6 /* 平沙落雁.m4a in Resources */,
+				FFDA636F1BE2E05800CF80B6 /* 十面埋伏.m4a in Resources */,
 				FFC30B6C1BDCB52100D89D62 /* Main.storyboard in Resources */,
-				FFDA633F1BE2D94F00CF80B6 /* 十面埋伏.m4a in Resources */,
-				FFDA63481BE2DB8F00CF80B6 /* 阳春白雪.m4a in Resources */,
-				1D65B96C1BE22DFB00926244 /* 胡笳十八拍.mp3 in Resources */,
 				1D65B9881BE23A4300926244 /* scys_xushi.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -66,6 +66,12 @@
 {
 
     self.dict = dict;
+
+    if (dict[@"mp3"] && dict[@"mp3-2"]) {
+        NSMutableDictionary *dict_ = [NSMutableDictionary dictionaryWithDictionary:dict];
+        dict_[@"mp3"] = (arc4random() % 10/2 == 0 ) ? dict[@"mp3"] : dict[@"mp3-2"];
+        self.dict = dict_;
+    }
     
 }
 

@@ -61,6 +61,8 @@
     dict[@"title"] = @"21:00-23:00 三焦经";
     dict[@"sub_title"] = @"亥时";
     dict[@"html"] = @"scys_haishi";
+    dict[@"mp3"] = @"平沙落雁.m4a";
+    dict[@"mp3-2"] = @"忆故人.mp3";
     dict[@"desc"] = @"亥时百脉通，养身养娇容。";
     dict[@"detail"] = @"此时三焦经最旺。三焦是六腑中最大的腑，具备主持诸气，疏通水路的作用，亥时三焦通百脉，人如果在亥时深度睡眠，百脉可休息生息，对身板十分有益，百岁老人有个共同独特之处，即亥时困觉，故此时段内睡觉最佳，易于第二日起床后精神倍好。";
     
@@ -117,8 +119,8 @@
     dict[@"title"] = @"9:00-11:00 脾经";
     dict[@"sub_title"] = @"巳时";
     dict[@"html"] = @"scys_sishi";
-    dict[@"mp3"] = @"高山流水.m4a";
-    dict[@"mp3-2"] = @"阳春白雪.m4a";
+    dict[@"mp3"] = @"高山.m4a";
+    dict[@"mp3-2"] = @"阳春.m4a";
     dict[@"desc"] = @"巳时脾经旺，造血身体壮。";
     dict[@"detail"] = @"此时脾经最旺，\"脾主运化，脾统血\"，脾是消化，吸收，排泄的总调度，又是人体血液的统领。\"脾开窍于口，其华在唇\"。脾的功效好，表现为消化吸收好，血的质量好，嘴唇红润。唇白标志血气不足，唇暗，唇紫标志寒入脾经。";
     [_dataArray addObject:dict];
@@ -127,6 +129,8 @@
     dict[@"title"] = @"11:00-13:00 心经";
     dict[@"sub_title"] = @"午时";
     dict[@"html"] = @"scys_wushi";
+    dict[@"mp3"] = @"乌夜啼.m4a";
+    dict[@"mp3-2"] = @"雉朝飞.mp3";
     dict[@"desc"] = @"午时一小憩，安神养精气。";
     dict[@"detail"] = @"此时心经最旺，\"心主神明，开窍于舌，其华在表\"。心气鞭策血液运行、养神、养气、养筋。人在中午能小睡片刻，对于养心大有益，可以使乃至晚上精神抖擞。心经此时保养表情舒服，适当休息或午睡。";
     [_dataArray addObject:dict];
@@ -136,6 +140,8 @@
     dict[@"title"] = @"13:00-15:00 小肠经";
     dict[@"sub_title"] = @"未时";
     dict[@"html"] = @"scys_weishi";
+    dict[@"mp3"] = @"列子御风.m4a";
+    dict[@"mp3-2"] = @"庄周梦蝶 .mp3";
     dict[@"desc"] = @"未时分清浊，饮水降虚火。";
     dict[@"detail"] = @"此时小肠经最旺。小肠分清浊，把水液归入膀胱，糟粕送入大肠，精华上输至脾。未时是小肠最活跃的时候，故午餐应在下午1时前吃。";
     [_dataArray addObject:dict];
@@ -143,6 +149,8 @@
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"15:00-17:00 膀胱经";
     dict[@"sub_title"] = @"申时";
+    dict[@"mp3"] = @"白雪.m4a";
+    dict[@"mp3-2"] = @"长清.m4a";
     dict[@"html"] = @"scys_shenshi";
     dict[@"desc"] = @"申时津液足，养阴身体舒。";
     dict[@"detail"] = @"此时膀胱经最旺，膀胱储藏水液和津液，轮回水液并将骈枝部分排出体外。津液在体内轮回，若膀胱有热，可致膀胱咳，咳而夜尿证。膀胱经膀胱最活跃的时候，适当多喝水。";
@@ -151,7 +159,9 @@
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"17:00-19:00 肾经";
     dict[@"sub_title"] = @"酉时";
-   dict[@"html"] = @"scys_youshi";
+    dict[@"html"] = @"scys_youshi";
+    dict[@"mp3"] = @"流水.m4a";
+    dict[@"mp3-2"] = @"鹤鸣九皋.m4a";
     dict[@"desc"] = @"酉时肾藏精，纳华元气清。";
     dict[@"detail"] = @"此时肾经最旺，\"肾藏于生殖之精，肾为天赋和五脏六腑之精之根\"。人体经过申时泄火排毒，肾在酉时步入储藏精华的阶段。肾经适合休息。";
     [_dataArray addObject:dict];
@@ -160,7 +170,8 @@
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"19:00-21:00 心包经";
     dict[@"sub_title"] = @"戌时";
-    dict[@"html"] = @"scys_xushi";    
+    dict[@"html"] = @"scys_xushi";
+    dict[@"mp3"] = @"文王操.m4a";
     dict[@"desc"] = @"戌时护心脏，减压心舒畅。";
     dict[@"detail"] = @"此时心包经最旺，\"心包为心之外膜，附有脉络，是气血通行之道邪不能容，容之心伤\"。心包是心的保护组织，又是气血运行的通道。心包经戌时行旺，可断根心脏周围外邪，使心脏处于无缺状况。心包经旺时宜随便走走，这时心脑颅神经器官系统最活跃，心脏欠好的人最好这时候敲心包经，成效最佳。";
     [_dataArray addObject:dict];
