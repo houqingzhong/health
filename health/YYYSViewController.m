@@ -161,4 +161,11 @@
     [self.navigationController pushViewController:wc animated:YES];
 
 }
+
+- (void)introView
+{
+    IntroViewController *iv = [IntroViewController new];
+    [iv loadHtml:@"yyys"];
+    [self.navigationController pushViewController:iv animated:YES];
+}
 @end
