@@ -85,10 +85,11 @@
     [_timeRight anchorTopRightWithRightPadding:left topPadding:top width:width height:height];
     
     
-    left = 20*XA;
-    height = 30 * XA;
-    width = CGRectGetMaxX(self.frame) - ((left + _timeLeft.xMax) *2);
-    [_progressView alignToTheRightOf:_timeLeft matchingCenterWithLeftPadding:left width:width height:height];
+//    left = 20*XA;
+//    height = 30 * XA;
+//    width = CGRectGetMaxX(self.frame) - ((left + _timeLeft.xMax) *2);
+//    [_progressView alignToTheRightOf:_timeLeft matchingCenterWithLeftPadding:left width:width height:height];
+    [_progressView anchorTopLeftWithLeftPadding:0 topPadding:0 width:self.width height:1];
     
     width = 80*XA;
     height = 80*XA;
