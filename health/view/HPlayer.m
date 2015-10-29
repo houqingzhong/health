@@ -120,8 +120,9 @@
         
         NSURL *url = [[NSBundle mainBundle] URLForResource:_dict[@"mp3"] withExtension:nil];
         [app.player loadItemWithURL:url autoPlay:NO];
-
     }
+    
+    app.dict = _dict;
     
     if (app.player.isPlaying) {
         [app.player pause];
