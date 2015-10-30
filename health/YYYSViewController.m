@@ -39,7 +39,7 @@
     self.navigationItem.title = @"音乐养生";
     
 
-    
+    _dataArray = [NSMutableArray new];
     
     self.view.backgroundColor = [UIColor whiteColor];
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -59,7 +59,7 @@
     
     
     
-    _dataArray = [NSMutableArray new];
+    NSMutableArray *dataArray = [NSMutableArray new];
     
     
     NSMutableDictionary *dict = [NSMutableDictionary new];
@@ -67,7 +67,7 @@
     dict[@"sub_title"] = @"肝者，将军之官，谋虑出焉。";
     dict[@"html"] = @"yyys_liver";
     dict[@"mp3"] = @"胡笳十八拍.mp3";
-    [_dataArray addObject:dict];
+    [dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"养心";
@@ -75,7 +75,7 @@
     dict[@"html"] = @"yyys_heart";
     dict[@"mp3"] = @"紫竹调.mp3";
 
-    [_dataArray addObject:dict];
+    [dataArray addObject:dict];
 
     
     dict = [NSMutableDictionary new];
@@ -83,22 +83,32 @@
     dict[@"sub_title"] = @"脾胃者，仓廪之官，五味出焉。";
     dict[@"html"] = @"yyys_spleen";
     dict[@"mp3"] = @"十面埋伏.m4a";
-    [_dataArray addObject:dict];
+    [dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"养肺";
     dict[@"sub_title"] = @"肺者，相傅之官，治节出焉。";
     dict[@"html"] = @"yyys_lung";
     dict[@"mp3"] = @"阳春白雪.mp3";
-    [_dataArray addObject:dict];
+    [dataArray addObject:dict];
+    
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"养肾";
     dict[@"sub_title"] = @"肾者，作强之官，伎巧出焉。";
     dict[@"html"] = @"yyys_kidney";
-    dict[@"mp3"] = @"梅花三弄.mp3";
-    [_dataArray addObject:dict];
+    dict[@"mp3"] = @"梅花三弄.m4a";
+    [dataArray addObject:dict];
     
+    [_dataArray addObject:dataArray];
     
+    dataArray = [NSMutableArray new];
+    dict = [NSMutableDictionary new];
+    dict[@"title"] = @"催眠";
+    dict[@"html"] = @"yyys_kidney";
+    dict[@"mp3"] = @"[平湖秋月, 梦幻曲, 催眠曲, 仲夏夜之梦]";
+    
+//    [_dataArray addObject:dataArray];
+
 }
 
 - (void)viewDidLayoutSubviews
@@ -111,15 +121,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return _dataArray.count;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataArray.count;
+
+    NSArray *dataArray = _dataArray[section];
+    
+    return dataArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSArray *dataArray = _dataArray[indexPath.section];
     
     YYCell *cell = [tableView dequeueReusableCellWithIdentifier:YYCellIdentifier forIndexPath:indexPath];
     
@@ -127,7 +145,7 @@
         cell = [[YYCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:YYCellIdentifier];
     }
         
-    [cell setData:_dataArray[indexPath.row]];
+    [cell setData:dataArray[indexPath.row]];
     
     return cell;
     
@@ -135,8 +153,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    return [YYCell height:_dataArray[indexPath.row]];
+    NSArray *dataArray = _dataArray[indexPath.section];
+    return [YYCell height:dataArray[indexPath.row]];
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
@@ -152,7 +170,8 @@
 
 - (void)jumpToDetail:(NSIndexPath *)indexPath
 {
-    NSDictionary *dict = _dataArray[indexPath.row];
+    NSArray *dataArray = _dataArray[indexPath.section];
+    NSDictionary *dict = dataArray[indexPath.row];
     
     WebViewDetailController *wc = [WebViewDetailController new];
 

@@ -76,7 +76,7 @@
     [_desc alignUnder:_subTitle matchingLeftAndRightWithTopPadding:top height:height];
     
     width = CGRectGetWidth(self.frame) - _title.xMax - left - left;
-    [self.seperator anchorBottomLeftWithLeftPadding:_title.xMax + left bottomPadding:0 width:width height:1];
+    [self.seperator anchorBottomLeftWithLeftPadding:_title.xMax + left bottomPadding:0 width:width height:1*XA];
 }
 
 - (void)setData:(NSDictionary *)dict

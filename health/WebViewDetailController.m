@@ -66,8 +66,10 @@
 {
 
     self.dict = dict;
-
-    if (dict[@"mp3"] && dict[@"mp3-2"]) {
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:_dict[@"mp3"] withExtension:nil];
+    NSURL *url2 = [[NSBundle mainBundle] URLForResource:_dict[@"mp3-2"] withExtension:nil];
+    if (url && url2) {
         NSMutableDictionary *dict_ = [NSMutableDictionary dictionaryWithDictionary:dict];
         dict_[@"mp3"] = (arc4random() % 10/2 == 0 ) ? dict[@"mp3"] : dict[@"mp3-2"];
         self.dict = dict_;

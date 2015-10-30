@@ -118,10 +118,9 @@
 {
     App(app);
     
-    if (![app.dict[@"mp3"] isEqualToString:_dict[@"mp3"]]) {
+    NSURL *url = [[NSBundle mainBundle] URLForResource:_dict[@"mp3"] withExtension:nil];
+    if (![app.dict[@"mp3"] isEqualToString:_dict[@"mp3"]] && url) {
         app.player.delegate = self;
-        
-        NSURL *url = [[NSBundle mainBundle] URLForResource:_dict[@"mp3"] withExtension:nil];
         [app.player loadItemWithURL:url autoPlay:NO];
     }
     

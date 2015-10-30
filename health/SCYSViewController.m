@@ -44,11 +44,9 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     
-    
     [_tableView anchorTopLeftWithLeftPadding:0 topPadding:0 width:CGRectGetWidth(self.view.frame) height:CGRectGetHeight(self.view.frame)];
     
     [self.view addSubview:_tableView];
-    
     
     
     [_tableView registerClass:[PeriodHealthCell class] forCellReuseIdentifier:CellIdentifier];
@@ -141,7 +139,7 @@
     dict[@"sub_title"] = @"未时";
     dict[@"html"] = @"scys_weishi";
     dict[@"mp3"] = @"列子御风.m4a";
-    dict[@"mp3-2"] = @"庄周梦蝶 .mp3";
+    dict[@"mp3-2"] = @"庄周梦蝶.m4a";
     dict[@"desc"] = @"未时分清浊，饮水降虚火。";
     dict[@"detail"] = @"此时小肠经最旺。小肠分清浊，把水液归入膀胱，糟粕送入大肠，精华上输至脾。未时是小肠最活跃的时候，故午餐应在下午1时前吃。";
     [_dataArray addObject:dict];
