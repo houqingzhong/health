@@ -61,12 +61,12 @@
     
     
     NSMutableDictionary *dict = [NSMutableDictionary new];
-    dict[@"title"] = @"时辰养生";
+    dict[@"title"] = @"十二时辰养生";
     dict[@"icon"] = @"shichen";
     [_dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
-    dict[@"title"] = @"音乐养生";
+    dict[@"title"] = @"五音疗疾";
     dict[@"icon"] = @"yinyue";    
     
     [_dataArray addObject:dict];
