@@ -45,8 +45,7 @@
 
     
     self.seperator = [UILabel new];
-    
-    self.seperator.backgroundColor = [UIColor grayAsparagus];
+    self.seperator.backgroundColor = [UIColor greenMunsell];
     
     [self addSubview:_title];
     [self addSubview:_subTitle];
