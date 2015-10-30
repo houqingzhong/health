@@ -117,7 +117,7 @@
 		FFA281C01BDCE6930095539F /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		FFA281C21BDCEB140095539F /* TimerHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerHeader.h; sourceTree = "<group>"; };
 		FFA281C31BDCEB140095539F /* TimerHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerHeader.m; sourceTree = "<group>"; };
-		FFC30B5E1BDCB52100D89D62 /* 健康养生之中医.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "健康养生之中医.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC30B5E1BDCB52100D89D62 /* 中医养生.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "中医养生.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC30B621BDCB52100D89D62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FFC30B641BDCB52100D89D62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FFC30B651BDCB52100D89D62 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		FFC30B5F1BDCB52100D89D62 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FFC30B5E1BDCB52100D89D62 /* 健康养生之中医.app */,
+				FFC30B5E1BDCB52100D89D62 /* 中医养生.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -371,7 +371,7 @@
 			);
 			name = health;
 			productName = health;
-			productReference = FFC30B5E1BDCB52100D89D62 /* 健康养生之中医.app */;
+			productReference = FFC30B5E1BDCB52100D89D62 /* 中医养生.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -660,7 +660,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tingting.health;
-				PRODUCT_NAME = "健康养生之中医";
+				PRODUCT_NAME = "中医养生";
 			};
 			name = Debug;
 		};
@@ -675,7 +675,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tingting.health;
-				PRODUCT_NAME = "健康养生之中医";
+				PRODUCT_NAME = "中医养生";
 			};
 			name = Release;
 		};
