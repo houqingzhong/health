@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D927619688AF590A00208077"
+               BlueprintIdentifier = "3113BC72BDE1D31193F6A017"
                BuildableName = "libZCAnimatedLabel.a"
                BlueprintName = "ZCAnimatedLabel"
                ReferencedContainer = "container:Pods.xcodeproj">

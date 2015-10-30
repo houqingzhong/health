@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5F2086A729CA97A23C0B0539"
+               BlueprintIdentifier = "EB893CCA93FF6F3D50EE6AE9"
                BuildableName = "libMZClockView.a"
                BlueprintName = "MZClockView"
                ReferencedContainer = "container:Pods.xcodeproj">

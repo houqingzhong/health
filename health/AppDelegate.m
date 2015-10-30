@@ -15,16 +15,22 @@
 
 @implementation AppDelegate
 
-- (APAudioPlayer *)player
+- (void)setup
 {
-    if (!_player) {
-        _player = [APAudioPlayer new];
+//    self.player = [[TDAudioInputStreamer alloc] init];
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"music.json" withExtension:nil];
+    NSError *error = nil;
+    NSString *jsonString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+    if (nil == error) {
+        self.musicData = [jsonString objectFromJSONString];
     }
-    return _player;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setup];
+    
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor greenMunsell]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
@@ -73,10 +79,10 @@
 }
 
 
-- (void)playerDidFinishPlaying:(APAudioPlayer *)player
-{
-    [_player play];
-}
+//- (void)playerDidFinishPlaying
+//{
+//    [[SCLTAudioPlayer sharedPlayer] play];
+//}
 
 
 @end

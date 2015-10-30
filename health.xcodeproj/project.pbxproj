@@ -23,6 +23,9 @@
 		1D65B9861BE23A3900926244 /* scys_youshi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9851BE23A3900926244 /* scys_youshi.html */; };
 		1D65B9881BE23A4300926244 /* scys_xushi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9871BE23A4300926244 /* scys_xushi.html */; };
 		1D65B98A1BE23A4E00926244 /* scys_haishi.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9891BE23A4E00926244 /* scys_haishi.html */; };
+		1D65B98C1BE3199500926244 /* music.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B98B1BE3199500926244 /* music.json */; };
+		1D86E91F1BE33EE20055F5FE /* TDSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D86E91C1BE33EE20055F5FE /* TDSession.m */; };
+		1D86E9221BE356A00055F5FE /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D86E9211BE356A00055F5FE /* Track.m */; };
 		C0F1FDD0876907098CDDD630 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F71D64658B9D73818BD77B0E /* libPods.a */; };
 		FF28B72C1BDCF4A60054C7B4 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72B1BDCF4A60054C7B4 /* HttpClient.m */; };
 		FF28B72F1BDD05330054C7B4 /* WeacherLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF28B72E1BDD05330054C7B4 /* WeacherLabel.m */; };
@@ -45,37 +48,13 @@
 		FFD8B9A51BE128CE0041EBE6 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B9A41BE128CE0041EBE6 /* IntroViewController.m */; };
 		FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */ = {isa = PBXBuildFile; fileRef = FFD8B9A71BE12A020041EBE6 /* yyys.html */; };
 		FFD8CCA31BE11A55006FBF8D /* SCYSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8CCA21BE11A55006FBF8D /* SCYSViewController.m */; };
-		FFDA635F1BE2E05800CF80B6 /* 文王操.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA635D1BE2E04D00CF80B6 /* 文王操.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63601BE2E05800CF80B6 /* 高山.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA635B1BE2DF9900CF80B6 /* 高山.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63611BE2E05800CF80B6 /* 鹤鸣九皋.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63591BE2DF3900CF80B6 /* 鹤鸣九皋.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63621BE2E05800CF80B6 /* 流水.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63571BE2DEDF00CF80B6 /* 流水.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63631BE2E05800CF80B6 /* 长清.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63551BE2DE5C00CF80B6 /* 长清.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63641BE2E05800CF80B6 /* 白雪.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63531BE2DDFE00CF80B6 /* 白雪.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63651BE2E05800CF80B6 /* 阳春.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63511BE2DD7A00CF80B6 /* 阳春.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63661BE2E05800CF80B6 /* 庄周梦蝶.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA634F1BE2DCFD00CF80B6 /* 庄周梦蝶.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63671BE2E05800CF80B6 /* 列子御风.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA634D1BE2DCBD00CF80B6 /* 列子御风.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63681BE2E05800CF80B6 /* 雉朝飞.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFDA634B1BE2DC4200CF80B6 /* 雉朝飞.mp3 */; settings = {ASSET_TAGS = (); }; };
-		FFDA63691BE2E05800CF80B6 /* 乌夜啼.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63491BE2DBF500CF80B6 /* 乌夜啼.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA636A1BE2E05800CF80B6 /* 阳春白雪.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63471BE2DB8F00CF80B6 /* 阳春白雪.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA636B1BE2E05800CF80B6 /* 高山流水.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63451BE2DAFC00CF80B6 /* 高山流水.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA636C1BE2E05800CF80B6 /* 洞庭秋思.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63431BE2DA9400CF80B6 /* 洞庭秋思.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA636D1BE2E05800CF80B6 /* 山居吟.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63411BE2DA4E00CF80B6 /* 山居吟.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA636E1BE2E05800CF80B6 /* 梅花三弄.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633D1BE2D85300CF80B6 /* 梅花三弄.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA636F1BE2E05800CF80B6 /* 十面埋伏.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633C1BE2D77B00CF80B6 /* 十面埋伏.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63701BE2E05800CF80B6 /* 潇湘水云.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63711BE2E05800CF80B6 /* 阳春白雪.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */; settings = {ASSET_TAGS = (); }; };
-		FFDA63721BE2E05800CF80B6 /* 胡笳十八拍.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B96B1BE22DFB00926244 /* 胡笳十八拍.mp3 */; settings = {ASSET_TAGS = (); }; };
-		FFDA63731BE2E05800CF80B6 /* 紫竹调.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D65B9691BE22C8500926244 /* 紫竹调.mp3 */; settings = {ASSET_TAGS = (); }; };
-		FFDA63751BE2E10400CF80B6 /* 平沙落雁.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63741BE2E10400CF80B6 /* 平沙落雁.m4a */; settings = {ASSET_TAGS = (); }; };
-		FFDA63771BE2E14F00CF80B6 /* 忆故人.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63761BE2E14F00CF80B6 /* 忆故人.mp3 */; settings = {ASSET_TAGS = (); }; };
-		FFDA63791BE2E86C00CF80B6 /* 平湖秋月.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FFDA63781BE2E86C00CF80B6 /* 平湖秋月.m4a */; settings = {ASSET_TAGS = (); }; };
 		FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4901BE12DBF002CCAB9 /* scys.html */; };
 		FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */; };
 		FFDCC4961BE1304B002CCAB9 /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4951BE1304B002CCAB9 /* WebViewDetailController.m */; };
 		FFDCC4981BE13304002CCAB9 /* yyys_liver.html in Resources */ = {isa = PBXBuildFile; fileRef = FFDCC4971BE13304002CCAB9 /* yyys_liver.html */; };
-		FFDCC49B1BE270FC002CCAB9 /* HTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC49A1BE270FC002CCAB9 /* HTypeCell.m */; settings = {ASSET_TAGS = (); }; };
-		FFDCC49E1BE27289002CCAB9 /* YYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC49D1BE27289002CCAB9 /* YYCell.m */; settings = {ASSET_TAGS = (); }; };
-		FFDCC4A11BE2775B002CCAB9 /* HPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4A01BE2775B002CCAB9 /* HPlayer.m */; settings = {ASSET_TAGS = (); }; };
+		FFDCC49B1BE270FC002CCAB9 /* HTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC49A1BE270FC002CCAB9 /* HTypeCell.m */; };
+		FFDCC49E1BE27289002CCAB9 /* YYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC49D1BE27289002CCAB9 /* YYCell.m */; };
+		FFDCC4A11BE2775B002CCAB9 /* HPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4A01BE2775B002CCAB9 /* HPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,9 +63,6 @@
 		1D65B95F1BE2180000926244 /* yyys_lung.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_lung.html; sourceTree = "<group>"; };
 		1D65B9611BE2182700926244 /* yyys_kidney.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_kidney.html; sourceTree = "<group>"; };
 		1D65B9661BE224DA00926244 /* scys_html_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scys_html_bg.png; sourceTree = "<group>"; };
-		1D65B9691BE22C8500926244 /* 紫竹调.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "紫竹调.mp3"; sourceTree = "<group>"; };
-		1D65B96B1BE22DFB00926244 /* 胡笳十八拍.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "胡笳十八拍.mp3"; sourceTree = "<group>"; };
-		1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "阳春白雪.mp3"; sourceTree = "<group>"; };
 		1D65B9731BE237C600926244 /* scys_zishi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_zishi.html; sourceTree = "<group>"; };
 		1D65B9751BE2397800926244 /* scys_choushi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_choushi.html; sourceTree = "<group>"; };
 		1D65B9771BE239E600926244 /* scys_yinshi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_yinshi.html; sourceTree = "<group>"; };
@@ -99,6 +75,11 @@
 		1D65B9851BE23A3900926244 /* scys_youshi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_youshi.html; sourceTree = "<group>"; };
 		1D65B9871BE23A4300926244 /* scys_xushi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_xushi.html; sourceTree = "<group>"; };
 		1D65B9891BE23A4E00926244 /* scys_haishi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys_haishi.html; sourceTree = "<group>"; };
+		1D65B98B1BE3199500926244 /* music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = music.json; sourceTree = "<group>"; };
+		1D86E91B1BE33EE20055F5FE /* TDSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSession.h; sourceTree = "<group>"; };
+		1D86E91C1BE33EE20055F5FE /* TDSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSession.m; sourceTree = "<group>"; };
+		1D86E9201BE356A00055F5FE /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		1D86E9211BE356A00055F5FE /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		399DFCCFE63ACE241A2D3D6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F71D64658B9D73818BD77B0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF28B72A1BDCF4A60054C7B4 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -141,27 +122,6 @@
 		FFD8B9A71BE12A020041EBE6 /* yyys.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys.html; sourceTree = "<group>"; };
 		FFD8CCA11BE11A55006FBF8D /* SCYSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYSViewController.h; sourceTree = "<group>"; };
 		FFD8CCA21BE11A55006FBF8D /* SCYSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYSViewController.m; sourceTree = "<group>"; };
-		FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "潇湘水云.m4a"; sourceTree = "<group>"; };
-		FFDA633C1BE2D77B00CF80B6 /* 十面埋伏.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "十面埋伏.m4a"; sourceTree = "<group>"; };
-		FFDA633D1BE2D85300CF80B6 /* 梅花三弄.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "梅花三弄.m4a"; sourceTree = "<group>"; };
-		FFDA63411BE2DA4E00CF80B6 /* 山居吟.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "山居吟.m4a"; sourceTree = "<group>"; };
-		FFDA63431BE2DA9400CF80B6 /* 洞庭秋思.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "洞庭秋思.m4a"; sourceTree = "<group>"; };
-		FFDA63451BE2DAFC00CF80B6 /* 高山流水.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "高山流水.m4a"; sourceTree = "<group>"; };
-		FFDA63471BE2DB8F00CF80B6 /* 阳春白雪.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "阳春白雪.m4a"; sourceTree = "<group>"; };
-		FFDA63491BE2DBF500CF80B6 /* 乌夜啼.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "乌夜啼.m4a"; sourceTree = "<group>"; };
-		FFDA634B1BE2DC4200CF80B6 /* 雉朝飞.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "雉朝飞.mp3"; sourceTree = "<group>"; };
-		FFDA634D1BE2DCBD00CF80B6 /* 列子御风.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "列子御风.m4a"; sourceTree = "<group>"; };
-		FFDA634F1BE2DCFD00CF80B6 /* 庄周梦蝶.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "庄周梦蝶.m4a"; sourceTree = "<group>"; };
-		FFDA63511BE2DD7A00CF80B6 /* 阳春.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "阳春.m4a"; sourceTree = "<group>"; };
-		FFDA63531BE2DDFE00CF80B6 /* 白雪.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "白雪.m4a"; sourceTree = "<group>"; };
-		FFDA63551BE2DE5C00CF80B6 /* 长清.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "长清.m4a"; sourceTree = "<group>"; };
-		FFDA63571BE2DEDF00CF80B6 /* 流水.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "流水.m4a"; sourceTree = "<group>"; };
-		FFDA63591BE2DF3900CF80B6 /* 鹤鸣九皋.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "鹤鸣九皋.m4a"; sourceTree = "<group>"; };
-		FFDA635B1BE2DF9900CF80B6 /* 高山.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "高山.m4a"; sourceTree = "<group>"; };
-		FFDA635D1BE2E04D00CF80B6 /* 文王操.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "文王操.m4a"; sourceTree = "<group>"; };
-		FFDA63741BE2E10400CF80B6 /* 平沙落雁.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "平沙落雁.m4a"; sourceTree = "<group>"; };
-		FFDA63761BE2E14F00CF80B6 /* 忆故人.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "忆故人.mp3"; sourceTree = "<group>"; };
-		FFDA63781BE2E86C00CF80B6 /* 平湖秋月.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "平湖秋月.m4a"; sourceTree = "<group>"; };
 		FFDCC4901BE12DBF002CCAB9 /* scys.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scys.html; sourceTree = "<group>"; };
 		FFDCC4921BE12F4A002CCAB9 /* yyys_heart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yyys_heart.html; sourceTree = "<group>"; };
 		FFDCC4941BE1304B002CCAB9 /* WebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDetailController.h; sourceTree = "<group>"; };
@@ -187,6 +147,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D86E9161BE33ED50055F5FE /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				1D86E9201BE356A00055F5FE /* Track.h */,
+				1D86E9211BE356A00055F5FE /* Track.m */,
+				1D86E91B1BE33EE20055F5FE /* TDSession.h */,
+				1D86E91C1BE33EE20055F5FE /* TDSession.m */,
+			);
+			name = engine;
+			sourceTree = "<group>";
+		};
 		B18E3907ACF8E810663E1D2B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +196,7 @@
 		FFC30B601BDCB52100D89D62 /* health */ = {
 			isa = PBXGroup;
 			children = (
+				1D86E9161BE33ED50055F5FE /* engine */,
 				FFD8B9A61BE129F50041EBE6 /* html */,
 				FFC30B801BDCC16100D89D62 /* category */,
 				FFC30B781BDCB92700D89D62 /* view */,
@@ -303,30 +275,6 @@
 		FFD8B9A61BE129F50041EBE6 /* html */ = {
 			isa = PBXGroup;
 			children = (
-				FFDA63781BE2E86C00CF80B6 /* 平湖秋月.m4a */,
-				FFDA63761BE2E14F00CF80B6 /* 忆故人.mp3 */,
-				FFDA63741BE2E10400CF80B6 /* 平沙落雁.m4a */,
-				FFDA635D1BE2E04D00CF80B6 /* 文王操.m4a */,
-				FFDA635B1BE2DF9900CF80B6 /* 高山.m4a */,
-				FFDA63591BE2DF3900CF80B6 /* 鹤鸣九皋.m4a */,
-				FFDA63571BE2DEDF00CF80B6 /* 流水.m4a */,
-				FFDA63551BE2DE5C00CF80B6 /* 长清.m4a */,
-				FFDA63531BE2DDFE00CF80B6 /* 白雪.m4a */,
-				FFDA63511BE2DD7A00CF80B6 /* 阳春.m4a */,
-				FFDA634F1BE2DCFD00CF80B6 /* 庄周梦蝶.m4a */,
-				FFDA634D1BE2DCBD00CF80B6 /* 列子御风.m4a */,
-				FFDA634B1BE2DC4200CF80B6 /* 雉朝飞.mp3 */,
-				FFDA63491BE2DBF500CF80B6 /* 乌夜啼.m4a */,
-				FFDA63471BE2DB8F00CF80B6 /* 阳春白雪.m4a */,
-				FFDA63451BE2DAFC00CF80B6 /* 高山流水.m4a */,
-				FFDA63431BE2DA9400CF80B6 /* 洞庭秋思.m4a */,
-				FFDA63411BE2DA4E00CF80B6 /* 山居吟.m4a */,
-				FFDA633D1BE2D85300CF80B6 /* 梅花三弄.m4a */,
-				FFDA633C1BE2D77B00CF80B6 /* 十面埋伏.m4a */,
-				FFDA633B1BE2D6A500CF80B6 /* 潇湘水云.m4a */,
-				1D65B96F1BE2306200926244 /* 阳春白雪.mp3 */,
-				1D65B96B1BE22DFB00926244 /* 胡笳十八拍.mp3 */,
-				1D65B9691BE22C8500926244 /* 紫竹调.mp3 */,
 				1D65B9661BE224DA00926244 /* scys_html_bg.png */,
 				FFD8B9A71BE12A020041EBE6 /* yyys.html */,
 				FFDCC4901BE12DBF002CCAB9 /* scys.html */,
@@ -347,6 +295,7 @@
 				1D65B9851BE23A3900926244 /* scys_youshi.html */,
 				1D65B9871BE23A4300926244 /* scys_xushi.html */,
 				1D65B9891BE23A4E00926244 /* scys_haishi.html */,
+				1D65B98B1BE3199500926244 /* music.json */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -363,7 +312,6 @@
 				FFC30B5B1BDCB52100D89D62 /* Frameworks */,
 				FFC30B5C1BDCB52100D89D62 /* Resources */,
 				50A0CD785E0C7B992CB1D167 /* Copy Pods Resources */,
-				0B5823ADD66A587EB04CFA79 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,51 +364,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFDA63651BE2E05800CF80B6 /* 阳春.m4a in Resources */,
 				FFC30B711BDCB52100D89D62 /* LaunchScreen.storyboard in Resources */,
 				FFDCC4981BE13304002CCAB9 /* yyys_liver.html in Resources */,
 				1D65B9621BE2182700926244 /* yyys_kidney.html in Resources */,
-				FFDA636E1BE2E05800CF80B6 /* 梅花三弄.m4a in Resources */,
 				1D65B9841BE23A2F00926244 /* scys_shenshi.html in Resources */,
 				1D65B9671BE224DA00926244 /* scys_html_bg.png in Resources */,
 				1D65B9601BE2180000926244 /* yyys_lung.html in Resources */,
-				FFDA635F1BE2E05800CF80B6 /* 文王操.m4a in Resources */,
 				1D65B9741BE237C600926244 /* scys_zishi.html in Resources */,
-				FFDA63681BE2E05800CF80B6 /* 雉朝飞.mp3 in Resources */,
 				1D65B9781BE239E600926244 /* scys_yinshi.html in Resources */,
 				1D65B97A1BE239F500926244 /* scys_maoshi.html in Resources */,
-				FFDA63631BE2E05800CF80B6 /* 长清.m4a in Resources */,
 				1D65B97C1BE23A0400926244 /* scys_chenshi.html in Resources */,
-				FFDA636B1BE2E05800CF80B6 /* 高山流水.m4a in Resources */,
-				FFDA636A1BE2E05800CF80B6 /* 阳春白雪.m4a in Resources */,
 				1D65B9801BE23A1A00926244 /* scys_wushi.html in Resources */,
-				FFDA63671BE2E05800CF80B6 /* 列子御风.m4a in Resources */,
 				1D65B98A1BE23A4E00926244 /* scys_haishi.html in Resources */,
-				FFDA63731BE2E05800CF80B6 /* 紫竹调.mp3 in Resources */,
-				FFDA63661BE2E05800CF80B6 /* 庄周梦蝶.m4a in Resources */,
-				FFDA63701BE2E05800CF80B6 /* 潇湘水云.m4a in Resources */,
-				FFDA636D1BE2E05800CF80B6 /* 山居吟.m4a in Resources */,
-				FFDA63641BE2E05800CF80B6 /* 白雪.m4a in Resources */,
 				FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */,
 				FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */,
-				FFDA63601BE2E05800CF80B6 /* 高山.m4a in Resources */,
 				1D65B9861BE23A3900926244 /* scys_youshi.html in Resources */,
-				FFDA63611BE2E05800CF80B6 /* 鹤鸣九皋.m4a in Resources */,
-				FFDA63771BE2E14F00CF80B6 /* 忆故人.mp3 in Resources */,
 				1D65B97E1BE23A1000926244 /* scys_sishi.html in Resources */,
-				FFDA63621BE2E05800CF80B6 /* 流水.m4a in Resources */,
-				FFDA63711BE2E05800CF80B6 /* 阳春白雪.mp3 in Resources */,
 				FFC30B6E1BDCB52100D89D62 /* Assets.xcassets in Resources */,
-				FFDA63691BE2E05800CF80B6 /* 乌夜啼.m4a in Resources */,
-				FFDA63721BE2E05800CF80B6 /* 胡笳十八拍.mp3 in Resources */,
 				1D65B95E1BE217B100926244 /* yyys_spleen.html in Resources */,
-				FFDA636C1BE2E05800CF80B6 /* 洞庭秋思.m4a in Resources */,
 				1D65B9761BE2397800926244 /* scys_choushi.html in Resources */,
+				1D65B98C1BE3199500926244 /* music.json in Resources */,
 				FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */,
 				1D65B9821BE23A2300926244 /* scys_weishi.html in Resources */,
-				FFDA63751BE2E10400CF80B6 /* 平沙落雁.m4a in Resources */,
-				FFDA63791BE2E86C00CF80B6 /* 平湖秋月.m4a in Resources */,
-				FFDA636F1BE2E05800CF80B6 /* 十面埋伏.m4a in Resources */,
 				FFC30B6C1BDCB52100D89D62 /* Main.storyboard in Resources */,
 				1D65B9881BE23A4300926244 /* scys_xushi.html in Resources */,
 			);
@@ -469,21 +394,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B5823ADD66A587EB04CFA79 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1D1FE9F1D55188A5E09ACD18 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,6 +433,7 @@
 			files = (
 				FFC30B691BDCB52100D89D62 /* ViewController.m in Sources */,
 				FFA281BB1BDCE2270095539F /* NSString+Extension.m in Sources */,
+				1D86E91F1BE33EE20055F5FE /* TDSession.m in Sources */,
 				FF28B72C1BDCF4A60054C7B4 /* HttpClient.m in Sources */,
 				FFDCC4A11BE2775B002CCAB9 /* HPlayer.m in Sources */,
 				FFA281C41BDCEB140095539F /* TimerHeader.m in Sources */,
@@ -542,6 +453,7 @@
 				FF28B7321BDD0F6A0054C7B4 /* HPublicMethod.m in Sources */,
 				FFD8B99F1BE125CB0041EBE6 /* YYYSViewController.m in Sources */,
 				FFC30B7E1BDCB98900D89D62 /* PeriodHealthCell.m in Sources */,
+				1D86E9221BE356A00055F5FE /* Track.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

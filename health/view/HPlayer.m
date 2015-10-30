@@ -8,14 +8,18 @@
 
 #import "HPlayer.h"
 #import "HPublic.h"
+#import "Track.h"
+static void *kStatusKVOKey = &kStatusKVOKey;
+static void *kDurationKVOKey = &kDurationKVOKey;
+static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 
-@interface HPlayer()<APAudioPlayerDelegate>
+@interface HPlayer()
 {
-    UIButton        *_playButtton;
-    UIProgressView        *_progressView;
-    UILabel         *_timeLeft;
-    UILabel         *_timeRight;
-    
+    UIButton                    *_playButtton;
+    UIProgressView         *_progressView;
+    UILabel                      *_timeLeft;
+    UILabel                      *_timeRight;
+    UILabel                      *_statusLabel;
 }
 /* Timer */
 @property (nonatomic, strong) NSTimer *timer;
@@ -34,17 +38,21 @@
         _progressView = [UIProgressView new];
         [self addSubview:_progressView];
         
+        _statusLabel = [UILabel new];
+
+        [self addSubview:_statusLabel];
         
         _timeLeft = [UILabel new];
         [self addSubview:_timeLeft];
         
-        
         _timeRight = [UILabel new];
         [self addSubview:_timeRight];
-        
-        
+                
         _playButtton = [UIButton new];
         [self addSubview:_playButtton];
+        
+        _statusLabel.font = [UIFont systemFontOfSize:28*XA];
+        _statusLabel.textColor = [UIColor rebeccaPurple];
         
         _timeLeft.font = [UIFont systemFontOfSize:14*XA];
         _timeRight.font = [UIFont systemFontOfSize:14*XA];
@@ -84,29 +92,29 @@
     height = size.height;
     [_timeRight anchorTopRightWithRightPadding:left topPadding:top width:width height:height];
     
-    
-//    left = 20*XA;
-//    height = 30 * XA;
-//    width = CGRectGetMaxX(self.frame) - ((left + _timeLeft.xMax) *2);
-//    [_progressView alignToTheRightOf:_timeLeft matchingCenterWithLeftPadding:left width:width height:height];
     [_progressView anchorTopLeftWithLeftPadding:0 topPadding:0 width:self.width height:1];
     
     width = 80*XA;
     height = 80*XA;
     
     [_playButtton alignUnder:_progressView withLeftPadding:20*XA topPadding:40*XA width:width height:height];
-    
 
+    
+    width = self.width - _playButtton.xMax - 30*XA - 20*XA;
+    [_statusLabel alignToTheRightOf:_playButtton matchingCenterWithLeftPadding:30*XA width:width height:60*XA];
+    
 }
 
 - (void)setData:(NSDictionary *)dict
 {
     self.dict = dict;
-    
+    _statusLabel.text = _dict[@"track"][@"title"];
     App(app);
-    if ([app.dict[@"mp3"] isEqualToString:_dict[@"mp3"]]) {
-        app.player.delegate = self;
+    NSInteger playingTrackId = [app.dict[@"track"][@"trackId"] integerValue];
+    NSInteger trackId = [_dict[@"track"][@"trackId"] integerValue];
+    if (trackId == playingTrackId) {
         [self scheduleProgressTimer];
+        
         [self updateTogglePlayButton];
     }
 
@@ -117,23 +125,45 @@
 - (void)togglePlayButtonClicked
 {
     App(app);
-    
-    NSURL *url = [[NSBundle mainBundle] URLForResource:_dict[@"mp3"] withExtension:nil];
-    if (![app.dict[@"mp3"] isEqualToString:_dict[@"mp3"]] && url) {
-        app.player.delegate = self;
-        [app.player loadItemWithURL:url autoPlay:NO];
+    NSInteger playingTrackId = [app.dict[@"track"][@"trackId"] integerValue];
+    NSInteger trackId = [_dict[@"track"][@"trackId"] integerValue];
+    if (trackId != playingTrackId) {
+        NSString *urlString = _dict[@"track"][@"playPathAacv224"];
+        if (urlString) {
+            //stop
+            [app.player stop];
+            
+            //play
+            Track *track = [[Track alloc] init];
+            [track setTitle:_dict[@"track"][@"title"]];
+            [track setAudioFileURL:[NSURL URLWithString:urlString]];
+            
+            app.player = [[DOUAudioStreamer alloc] initWithAudioFile:track];
+            
+            [app.player play];
+            
+            [_playButtton setImage:[UIImage imageNamed:@"widget_pause_pressed"] forState:UIControlStateNormal];
+
+            app.dict = _dict;
+
+            [self scheduleProgressTimer];
+            
+        }
+
     }
-    
-    app.dict = _dict;
-    
-    if (app.player.isPlaying) {
-        [app.player pause];
-    } else {
-        [app.player play];
+    else
+    {
+        if (DOUAudioStreamerPlaying == app.player.status) {
+            [app.player pause];
+            [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
+        }
+        else
+        {
+            [app.player play];
+            [_playButtton setImage:[UIImage imageNamed:@"widget_pause_pressed"] forState:UIControlStateNormal];
+        }
     }
 }
-
-
 
 + (CGFloat)height
 {
@@ -143,9 +173,6 @@
 
 - (void)dealloc
 {
-    App(app);
-    app.player.delegate = app;
-    
     [self unshceduleProgressTimer];
 }
 
@@ -155,28 +182,24 @@
 - (void)updateTrackProgressView:(NSTimer *)timer
 {
     App(app);
-    _progressView.progress = app.player.position;
-    
-    _timeLeft.text = [self getDurationText:app.player.position *app.player.duration];
-    _timeRight.text = [self getDurationText:app.player.duration];
-
-}
-
-
-- (void)updateTogglePlayButton
-{
-    App(app);
-    if (app.player.isPlaying) {
-        [_playButtton setImage:[UIImage imageNamed:@"widget_pause_pressed"] forState:UIControlStateNormal];
-    } else {
-        [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
+    if ([app.player duration] == 0.0) {
+        [_progressView setProgress:0.0f];
     }
+    else {
+        [_progressView setProgress:[app.player currentTime] / [app.player duration]];
+    }
+
+//
+//    _timeLeft.text = [self getDurationText:app.player.position *app.player.duration];
+//    _timeRight.text = [self getDurationText:app.player.duration];
+
 }
 
 - (void)scheduleProgressTimer
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTrackProgressView:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
 }
 
 - (void)unshceduleProgressTimer
@@ -188,6 +211,22 @@
 
 
 #pragma mark private method
+
+- (void)addListener
+{
+    App(app);
+    [app.player addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:kStatusKVOKey];
+    [app.player addObserver:self forKeyPath:@"duration" options:NSKeyValueObservingOptionNew context:kDurationKVOKey];
+    [app.player addObserver:self forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew context:kBufferingRatioKVOKey];
+}
+
+- (void)removeListener
+{
+    App(app);
+    [app.player removeObserver:self forKeyPath:@"status"];
+    [app.player removeObserver:self forKeyPath:@"duration"];
+    [app.player removeObserver:self forKeyPath:@"bufferingRatio"];
+}
 
 - (NSString *)getDurationText:(CGFloat)duration
 {
@@ -221,56 +260,91 @@
 
 #pragma mark player
 
-- (void)playerDidChangePlayingStatus:(APAudioPlayer *)player
+
+- (void)updateTogglePlayButton
 {
-    if (player.isPlaying) {
-        [self scheduleProgressTimer];
+    App(app);
+    if (DOUAudioStreamerPlaying == app.player.status){
+        [_playButtton setImage:[UIImage imageNamed:@"widget_pause_pressed"] forState:UIControlStateNormal];
     } else {
-        [self unshceduleProgressTimer];
+        [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
     }
-    [self updateTogglePlayButton];
 }
 
-
-
-- (void)playerDidFinishPlaying:(APAudioPlayer *)player
+- (void)updateStatus
 {
-    [self updateTogglePlayButton];
-    [player play];
+    App(app);
+    switch (app.player.status) {
+        case DOUAudioStreamerPlaying:
+            [_statusLabel setText:_dict[@"track"][@"title"]];
+            [_playButtton setImage:[UIImage imageNamed:@"widget_pause_pressed"] forState:UIControlStateNormal];
+            break;
+            
+        case DOUAudioStreamerPaused:
+            [_statusLabel setText:_dict[@"track"][@"title"]];
+            [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
+            break;
+            
+        case DOUAudioStreamerIdle:
+            [_statusLabel setText:_dict[@"track"][@"title"]];
+            [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
+            break;
+            
+        case DOUAudioStreamerFinished:
+            [_statusLabel setText:@"finished"];
+            [_statusLabel setText:_dict[@"track"][@"title"]];
+            [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
+            break;
+            
+        case DOUAudioStreamerBuffering:
+            [_statusLabel setText:@"buffering"];
+            [_statusLabel setText:[NSString stringWithFormat:@"加载中..."]];
+            [_playButtton setImage:[UIImage imageNamed:@"widget_pause_pressed"] forState:UIControlStateNormal];
+            break;
+            
+        case DOUAudioStreamerError:
+            [_statusLabel setText:@"error"];
+            [_statusLabel setText:_dict[@"track"][@"title"]];
+            [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
+            break;
+    }
 }
 
-
-- (void)playerBeginInterruption:(APAudioPlayer *)player
+- (void)updateBufferingStatus
 {
+    App(app);
+    [_statusLabel setText:[NSString stringWithFormat:@"Received %.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", (double)[app.player receivedLength] / 1024 / 1024, (double)[app.player expectedLength] / 1024 / 1024, [app.player bufferingRatio] * 100.0, (double)[app.player downloadSpeed] / 1024 / 1024]];
     
+    if ([app.player bufferingRatio] >= 1.0) {
+        NSLog(@"sha256: %@", [app.player sha256]);
+    }
 }
 
 
-- (void)playerEndInterruption:(APAudioPlayer *)player shouldResume:(BOOL)should
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    
+    if (context == kStatusKVOKey) {
+        [self performSelector:@selector(updateStatus)
+                     onThread:[NSThread mainThread]
+                   withObject:nil
+                waitUntilDone:NO];
+    }
+    else if (context == kDurationKVOKey) {
+        [self performSelector:@selector(updateTrackProgressView:)
+                     onThread:[NSThread mainThread]
+                   withObject:nil
+                waitUntilDone:NO];
+    }
+    else if (context == kBufferingRatioKVOKey) {
+        [self performSelector:@selector(updateBufferingStatus)
+                     onThread:[NSThread mainThread]
+                   withObject:nil
+                waitUntilDone:NO];
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
 }
 
-/*
- 
- NSMutableDictionary *retDic = [[NSMutableDictionary alloc] init];
- 
- 
- 
- NSURL *url = [NSURL fileURLWithPath:path];
- AVURLAsset *mp3Asset = [AVURLAsset URLAssetWithURL:url options:nil];
- 
- //    NSLog(@"%@",mp3Asset);
- 
- for (NSString *format in [mp3Asset availableMetadataFormats]) {
- NSLog(@"format type = %@",format);
- for (AVMetadataItem *metadataItem in [mp3Asset metadataForFormat:format]) {
- 
- if(metadataItem.commonKey)
- [retDic setObject:metadataItem.value forKey:metadataItem.commonKey];
- 
- }
- }
 
- */
 @end

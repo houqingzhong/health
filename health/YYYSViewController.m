@@ -66,14 +66,14 @@
     dict[@"title"] = @"养肝";
     dict[@"sub_title"] = @"肝者，将军之官，谋虑出焉。";
     dict[@"html"] = @"yyys_liver";
-    dict[@"mp3"] = @"胡笳十八拍.mp3";
+    dict[@"mp3"] = @"胡笳十八拍";
     [dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"养心";
     dict[@"sub_title"] = @"心者，君主之官也，神明出焉。";
     dict[@"html"] = @"yyys_heart";
-    dict[@"mp3"] = @"紫竹调.mp3";
+    dict[@"mp3"] = @"紫竹调";
 
     [dataArray addObject:dict];
 
@@ -82,21 +82,21 @@
     dict[@"title"] = @"养脾";
     dict[@"sub_title"] = @"脾胃者，仓廪之官，五味出焉。";
     dict[@"html"] = @"yyys_spleen";
-    dict[@"mp3"] = @"十面埋伏.m4a";
+    dict[@"mp3"] = @"十面埋伏";
     [dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"养肺";
     dict[@"sub_title"] = @"肺者，相傅之官，治节出焉。";
     dict[@"html"] = @"yyys_lung";
-    dict[@"mp3"] = @"阳春白雪.mp3";
+    dict[@"mp3"] = @"阳春白雪";
     [dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
     dict[@"title"] = @"养肾";
     dict[@"sub_title"] = @"肾者，作强之官，伎巧出焉。";
     dict[@"html"] = @"yyys_kidney";
-    dict[@"mp3"] = @"梅花三弄.m4a";
+    dict[@"mp3"] = @"梅花三弄";
     [dataArray addObject:dict];
     
     [_dataArray addObject:dataArray];

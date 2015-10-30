@@ -64,15 +64,32 @@
 
 - (void)loadData:(NSDictionary *)dict
 {
-
-    self.dict = dict;
+    App(app);
+    NSArray *tracks = app.musicData[@"tracks"][@"list"];
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:_dict[@"mp3"] withExtension:nil];
-    NSURL *url2 = [[NSBundle mainBundle] URLForResource:_dict[@"mp3-2"] withExtension:nil];
-    if (url && url2) {
-        NSMutableDictionary *dict_ = [NSMutableDictionary dictionaryWithDictionary:dict];
-        dict_[@"mp3"] = (arc4random() % 10/2 == 0 ) ? dict[@"mp3"] : dict[@"mp3-2"];
-        self.dict = dict_;
+    __block NSDictionary *track1 = nil;
+    __block NSDictionary *track2 = nil;
+    [tracks enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj[@"title"] isEqualToString:dict[@"mp3"]]) {
+            
+            track1 = obj;
+            
+        }
+        
+        if ([obj[@"title"] isEqualToString:dict[@"mp3-2"]]) {
+            track2 = obj;
+        }
+    }];
+    
+    NSMutableDictionary *newDict = [NSMutableDictionary dictionaryWithDictionary:dict];
+    if (track1 && track2) {
+        newDict[@"track"] = (arc4random() % 2/2 == 0 ) ? track1 : track2;
+        self.dict = newDict;
+    }
+    else if (track1)
+    {
+        newDict[@"track"] = track1;
+        self.dict = newDict;
     }
     
 }

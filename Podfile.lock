@@ -22,7 +22,7 @@ PODS:
     - AFNetworking/NSURLSession
   - AGLocationDispatcher (0.0.7.2):
     - AFNetworking (~> 2.3)
-  - APAudioPlayer (0.0.4)
+  - DOUAudioStreamer (0.2.11)
   - Facade (1.1.0)
   - JSONKit-NoWarning (1.2)
   - MZClockView (1.0.2)
@@ -36,7 +36,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - AGLocationDispatcher (~> 0.0.7.2)
-  - APAudioPlayer (~> 0.0.4)
+  - DOUAudioStreamer (~> 0.2.11)
   - Facade (~> 1.1.0)
   - JSONKit-NoWarning (~> 1.2)
   - MZClockView (~> 1.0.2)
@@ -50,7 +50,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
   AGLocationDispatcher: cd4d05f41ac6b4c05df1dfb89b7e37c2b8d480f4
-  APAudioPlayer: 4b795d771a2fb901869d39e43f6e516c48a0a2f0
+  DOUAudioStreamer: 8aefc3e80eb6c01ec89fa3c30743c660e8c55bae
   Facade: 509c4a0e5fa8517d5e0e1e47251b520775904a9a
   JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
   MZClockView: dccbcd768ddeeb661cfd0dfe1772c32b05f39a6c
@@ -61,4 +61,4 @@ SPEC CHECKSUMS:
   UILabel+ContentSize: ca71fe5d87afd752e53a34466e52598d65db4705
   ZCAnimatedLabel: 8212da1d26db90eaac3848fd29415b56ef56dcd6
 
-COCOAPODS: 0.39.0
+COCOAPODS: 0.38.2

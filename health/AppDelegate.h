@@ -9,15 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "HPublic.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, APAudioPlayerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 
 /* Player */
-@property (nonatomic, strong) APAudioPlayer *player;
+@property (nonatomic, strong) DOUAudioStreamer *player;
+
 @property (nonatomic, strong) NSDictionary  *dict;
 
+@property (nonatomic, strong) NSDictionary *musicData;
 
 @end
 

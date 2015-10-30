@@ -22,8 +22,9 @@
 #import <TTTAttributedLabel.h>
 #import <RichStyleLabel.h>
 #import <ZCAnimatedLabel.h>
-#import <APAudioPlayer/APAudioPlayer.h>
+#import <DOUAudioStreamer.h>
 
+#import <JSONKit.h>
 #import "NSString+Extension.h"
 #import "UIColor+Hex.h"
 #import "HPublicMethod.h"
