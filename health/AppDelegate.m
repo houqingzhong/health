@@ -32,18 +32,22 @@
     [player addObserver:target forKeyPath:@"duration" options:NSKeyValueObservingOptionNew context:kDurationKVOKey];
     [player addObserver:target forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew context:kBufferingRatioKVOKey];
     
-    [player addObserver:self forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew context:kBufferingRatioKVOKey];
+//    [player addObserver:self forKeyPath:@"currentTime" options:NSKeyValueObservingOptionNew context:kCurrentTimeKVOKey];
+    
+    self.target = target;
     
     return player;
 }
 
-- (void)destroyPlayer:(id)target
+- (void)destroyPlayer
 {
 
-    [self.player removeObserver:target forKeyPath:@"status"];
-    [self.player removeObserver:target forKeyPath:@"duration"];
-    [self.player removeObserver:target forKeyPath:@"bufferingRatio"];
-    [self.player removeObserver:self forKeyPath:@"duration"];
+    [self.player removeObserver:_target forKeyPath:@"status"];
+    [self.player removeObserver:_target forKeyPath:@"duration"];
+    [self.player removeObserver:_target forKeyPath:@"bufferingRatio"];
+//    [self.player removeObserver:self forKeyPath:@"timingOffset"];
+    
+    self.target = nil;
 }
 
 - (void)setup
@@ -162,19 +166,19 @@
     }
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if (context == kDurationKVOKey) {
-        [self performSelector:@selector(updateTrackProgress)
-                     onThread:[NSThread mainThread]
-                   withObject:nil
-                waitUntilDone:NO];
-    }
-    else {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
-}
-
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+//{
+//    if ([keyPath isEqualToString:@"currentTime"]) {
+//        [self performSelector:@selector(updateTrackProgress)
+//                     onThread:[NSThread mainThread]
+//                   withObject:nil
+//                waitUntilDone:NO];
+//    }
+//    else {
+//        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+//    }
+//}
+//
 -(void)configNowPlayingInfoCenter:(NSDictionary *)info
 {
     

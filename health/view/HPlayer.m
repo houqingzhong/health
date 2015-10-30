@@ -10,7 +10,7 @@
 #import "HPublic.h"
 #import "Track.h"
 #import "TDSession.h"
-
+#import <UIImage+AFNetworking.h>
 
 @interface HPlayer()
 {
@@ -141,9 +141,21 @@
             [track setAudioFileURL:[NSURL URLWithString:urlString]];
             
             if (app.player) {
-                [app destroyPlayer:self];
+                [app destroyPlayer];
             }
             app.player = [app createPlayer:track target:self];
+            
+            NSDictionary *artDict = nil;
+//            if (_dict[@"track"][@"albumImage"]) {
+//                UIImage *img = [UIImage safeImageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_dict[@"track"][@"albumImage"]]]];
+//                artDict = @{@"name":_dict[@"track"][@"title"], @"album":_dict[@"track"][@"albumTitle"], @"image":img};
+//            }
+//            else
+            {
+                artDict = @{@"name":_dict[@"track"][@"title"], @"album":_dict[@"track"][@"albumTitle"]};
+            }
+            
+            [app configNowPlayingInfoCenter:artDict];
             
             [app.player play];
             
@@ -295,7 +307,7 @@
 - (void)updateBufferingStatus
 {
     App(app);
-    [_statusLabel setText:[NSString stringWithFormat:@"Received %.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", (double)[app.player receivedLength] / 1024 / 1024, (double)[app.player expectedLength] / 1024 / 1024, [app.player bufferingRatio] * 100.0, (double)[app.player downloadSpeed] / 1024 / 1024]];
+//    [_statusLabel setText:[NSString stringWithFormat:@"Received %.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", (double)[app.player receivedLength] / 1024 / 1024, (double)[app.player expectedLength] / 1024 / 1024, [app.player bufferingRatio] * 100.0, (double)[app.player downloadSpeed] / 1024 / 1024]];
     
     if ([app.player bufferingRatio] >= 1.0) {
         NSLog(@"sha256: %@", [app.player sha256]);
@@ -305,19 +317,19 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if (context == kStatusKVOKey) {
+    if ([keyPath isEqualToString:@"status"]) {
         [self performSelector:@selector(updateStatus)
                      onThread:[NSThread mainThread]
                    withObject:nil
                 waitUntilDone:NO];
     }
-    else if (context == kDurationKVOKey) {
+    else if ([keyPath isEqualToString:@"duration"]) {
         [self performSelector:@selector(updateTrackProgressView:)
                      onThread:[NSThread mainThread]
                    withObject:nil
                 waitUntilDone:NO];
     }
-    else if (context == kBufferingRatioKVOKey) {
+    else if ([keyPath isEqualToString:@"bufferingRatio"]) {
         [self performSelector:@selector(updateBufferingStatus)
                      onThread:[NSThread mainThread]
                    withObject:nil

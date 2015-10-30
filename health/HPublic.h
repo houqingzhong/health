@@ -16,7 +16,7 @@
 static void *kStatusKVOKey = &kStatusKVOKey;
 static void *kDurationKVOKey = &kDurationKVOKey;
 static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
-
+static void *kCurrentTimeKVOKey = &kCurrentTimeKVOKey;
 
 #import <UIView+Facade.h>
 #import <UIColor+MoreColors.h>

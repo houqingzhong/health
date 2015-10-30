@@ -21,10 +21,11 @@
 @property (nonatomic, strong) NSDictionary  *dict;
 
 @property (nonatomic, strong) NSDictionary *musicData;
-
+@property (nonatomic, strong) id target;
 
 - (DOUAudioStreamer *)createPlayer:(Track *)track target:(id)target;
-- (void)destroyPlayer:(id)target;
+- (void)destroyPlayer;
 
+-(void)configNowPlayingInfoCenter:(NSDictionary *)info;
 @end
 
