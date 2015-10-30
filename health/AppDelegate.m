@@ -106,7 +106,9 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     
-    [application beginReceivingRemoteControlEvents];
+//    [application beginReceivingRemoteControlEvents];
+    NSDictionary * artDict = @{@"name":_dict[@"track"][@"title"], @"album":_dict[@"track"][@"albumTitle"]};
+    [self configNowPlayingInfoCenter:artDict];
     
 }
 
@@ -166,19 +168,6 @@
     }
 }
 
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-//{
-//    if ([keyPath isEqualToString:@"currentTime"]) {
-//        [self performSelector:@selector(updateTrackProgress)
-//                     onThread:[NSThread mainThread]
-//                   withObject:nil
-//                waitUntilDone:NO];
-//    }
-//    else {
-//        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-//    }
-//}
-//
 -(void)configNowPlayingInfoCenter:(NSDictionary *)info
 {
     
@@ -188,25 +177,28 @@
     
     if (NSClassFromString(@"MPNowPlayingInfoCenter")) {
         
-        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-        if (info[@"name"]) {
-            dict[@"MPMediaItemPropertyTitle"] = info[@"name"];
-        }
+//        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+//        if (info[@"name"]) {
+//            dict[@"MPMediaItemPropertyTitle"] = info[@"name"];
+//        }
+//        
+//        if (info[@"singer"]) {
+//            dict[@"MPMediaItemPropertyArtist"] = info[@"singer"];
+//        }
+//        
+//        if (info[@"album"]) {
+//            dict[@"MPMediaItemPropertyAlbumTitle"] = info[@"album"];
+//        }
+//        
+//        if (info[@"imge"]) {
+//            MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc] initWithImage:info[@"imge"]];
+//            dict[@"MPMediaItemPropertyArtwork"] = artwork;
+//        }
+        NSDictionary *nowPlaying = @{MPMediaItemPropertyArtist:info[@"name"],MPMediaItemPropertyAlbumTitle: info[@"album"],MPMediaItemPropertyPlaybackDuration:@(_player.currentTime), MPNowPlayingInfoPropertyElapsedPlaybackTime:@(_player.duration)};
         
-        if (info[@"singer"]) {
-            dict[@"MPMediaItemPropertyArtist"] = info[@"singer"];
-        }
+        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nowPlaying];
         
-        if (info[@"album"]) {
-            dict[@"MPMediaItemPropertyAlbumTitle"] = info[@"album"];
-        }
-        
-        if (info[@"imge"]) {
-            MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc] initWithImage:info[@"imge"]];
-            dict[@"MPMediaItemPropertyArtwork"] = artwork;
-        }
-        
-        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
+//        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
         
     }
     
