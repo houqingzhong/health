@@ -145,17 +145,7 @@
             }
             app.player = [app createPlayer:track target:self];
             
-            NSDictionary *artDict = nil;
-//            if (_dict[@"track"][@"albumImage"]) {
-//                UIImage *img = [UIImage safeImageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_dict[@"track"][@"albumImage"]]]];
-//                artDict = @{@"name":_dict[@"track"][@"title"], @"album":_dict[@"track"][@"albumTitle"], @"image":img};
-//            }
-//            else
-            {
-                artDict = @{@"name":_dict[@"track"][@"title"], @"album":_dict[@"track"][@"albumTitle"]};
-            }
-            
-            [app configNowPlayingInfoCenter:artDict];
+            [app configNowPlayingInfoCenter:_dict];
             
             [app.player play];
             

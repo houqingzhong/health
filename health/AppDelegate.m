@@ -14,7 +14,7 @@
 #import "Track.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) NSTimer* timer;
 @end
 
 @implementation AppDelegate
@@ -106,14 +106,14 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     
-//    [application beginReceivingRemoteControlEvents];
-    NSDictionary * artDict = @{@"name":_dict[@"track"][@"title"], @"album":_dict[@"track"][@"albumTitle"]};
-    [self configNowPlayingInfoCenter:artDict];
-    
+
+    [self scheduleProgressTimer];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    [self unshceduleProgressTimer];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -157,6 +157,20 @@
     
 }
 
+
+- (void)scheduleProgressTimer
+{
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTrackProgress) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
+}
+
+- (void)unshceduleProgressTimer
+{
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
 - (void)updateTrackProgress
 {
     [self configNowPlayingInfoCenter:self.dict];
@@ -177,28 +191,22 @@
     
     if (NSClassFromString(@"MPNowPlayingInfoCenter")) {
         
-//        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-//        if (info[@"name"]) {
-//            dict[@"MPMediaItemPropertyTitle"] = info[@"name"];
-//        }
-//        
-//        if (info[@"singer"]) {
-//            dict[@"MPMediaItemPropertyArtist"] = info[@"singer"];
-//        }
-//        
-//        if (info[@"album"]) {
-//            dict[@"MPMediaItemPropertyAlbumTitle"] = info[@"album"];
-//        }
-//        
-//        if (info[@"imge"]) {
-//            MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc] initWithImage:info[@"imge"]];
-//            dict[@"MPMediaItemPropertyArtwork"] = artwork;
-//        }
-        NSDictionary *nowPlaying = @{MPMediaItemPropertyArtist:info[@"name"],MPMediaItemPropertyAlbumTitle: info[@"album"],MPMediaItemPropertyPlaybackDuration:@(_player.currentTime), MPNowPlayingInfoPropertyElapsedPlaybackTime:@(_player.duration)};
+        NSMutableDictionary *dict = [NSMutableDictionary new];
         
-        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nowPlaying];
+        if (info[@"track"][@"title"]) {
+            dict[MPMediaItemPropertyArtist] = info[@"track"][@"title"];
+        }
+        if (info[@"track"][@"albumTitle"]) {
+            dict[MPMediaItemPropertyAlbumTitle] = info[@"track"][@"albumTitle"];
+        }
+    
+        MPMediaItemArtwork *mArt = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:@"icon"]];
+        dict[MPMediaItemPropertyArtwork] = mArt;
+
+        dict[MPNowPlayingInfoPropertyElapsedPlaybackTime] = @(_player.currentTime);
+        dict[MPMediaItemPropertyPlaybackDuration] = @(_player.duration-_player.currentTime);
         
-//        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
+        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
         
     }
     
