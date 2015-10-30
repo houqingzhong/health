@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : BaseViewController
 
 - (void)setData:(NSDictionary *)dict;
 

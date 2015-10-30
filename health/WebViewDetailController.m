@@ -20,6 +20,11 @@
 
 @implementation WebViewDetailController
 
+- (void)dealloc
+{
+    _player = nil;
+}
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface WebViewDetailController : UIViewController
+@interface WebViewDetailController : BaseViewController
 
 - (void)loadData:(NSDictionary *)dict;
 

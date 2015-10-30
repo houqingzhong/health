@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "HPublic.h"
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MPMediaItem.h>
+#import <MediaPlayer/MPNowPlayingInfoCenter.h>
+#import "Track.h"
 
 @interface AppDelegate ()
 
@@ -15,9 +19,42 @@
 
 @implementation AppDelegate
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVAudioSessionRouteChangeNotification object:nil];
+}
+
+- (DOUAudioStreamer *)createPlayer:(Track *)track target:(id)target
+{
+    DOUAudioStreamer *player = [[DOUAudioStreamer alloc] initWithAudioFile:track];
+    
+    [player addObserver:target forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:kStatusKVOKey];
+    [player addObserver:target forKeyPath:@"duration" options:NSKeyValueObservingOptionNew context:kDurationKVOKey];
+    [player addObserver:target forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew context:kBufferingRatioKVOKey];
+    
+    [player addObserver:self forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew context:kBufferingRatioKVOKey];
+    
+    return player;
+}
+
+- (void)destroyPlayer:(id)target
+{
+
+    [self.player removeObserver:target forKeyPath:@"status"];
+    [self.player removeObserver:target forKeyPath:@"duration"];
+    [self.player removeObserver:target forKeyPath:@"bufferingRatio"];
+    [self.player removeObserver:self forKeyPath:@"duration"];
+}
+
 - (void)setup
 {
-//    self.player = [[TDAudioInputStreamer alloc] init];
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    NSError *setCategoryError = nil;
+    [session setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
+    NSError *activationError = nil;
+    [session setActive:YES error:&activationError];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleInterruptionChangeToState:) name:AVAudioSessionRouteChangeNotification object:nil];
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"music.json" withExtension:nil];
     NSError *error = nil;
@@ -64,6 +101,9 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [application beginReceivingRemoteControlEvents];
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -85,4 +125,149 @@
 //}
 
 
+
+- (void)handleInterruptionChangeToState:(NSNotification *)notification
+
+{
+    
+    AudioQueuePropertyID inInterruptionState= (UInt32)[[notification object] longValue];
+    
+
+    if (inInterruptionState == kAudioSessionBeginInterruption)
+        
+    {
+        
+        [_player pause];
+    }
+    
+    else if (inInterruptionState == kAudioSessionEndInterruption)
+        
+    {
+        
+        
+        [_player play];
+        
+    }
+    
+}
+
+- (void)updateTrackProgress
+{
+    [self configNowPlayingInfoCenter:self.dict];
+    if ([self.player duration] == 0.0) {
+        //[_progressView setProgress:0.0f];
+    }
+    else {
+        //[_progressView setProgress:[app.player currentTime] / [app.player duration]];
+    }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == kDurationKVOKey) {
+        [self performSelector:@selector(updateTrackProgress)
+                     onThread:[NSThread mainThread]
+                   withObject:nil
+                waitUntilDone:NO];
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+-(void)configNowPlayingInfoCenter:(NSDictionary *)info
+{
+    
+    if (!info) {
+        return;
+    }
+    
+    if (NSClassFromString(@"MPNowPlayingInfoCenter")) {
+        
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+        if (info[@"name"]) {
+            dict[@"MPMediaItemPropertyTitle"] = info[@"name"];
+        }
+        
+        if (info[@"singer"]) {
+            dict[@"MPMediaItemPropertyArtist"] = info[@"singer"];
+        }
+        
+        if (info[@"album"]) {
+            dict[@"MPMediaItemPropertyAlbumTitle"] = info[@"album"];
+        }
+        
+        if (info[@"imge"]) {
+            MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc] initWithImage:info[@"imge"]];
+            dict[@"MPMediaItemPropertyArtwork"] = artwork;
+        }
+        
+        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
+        
+    }
+    
+}
+
+
 @end
+
+
+//-(void)setAudioSession{
+//
+//    //AudioSessionInitialize用于控制打断 ，后面会说
+//
+//    AudioSessionInitialize (
+//
+//                            NULL,                          // ‘NULL’ to use the default (main) run loop
+//
+//                            NULL,                          // ‘NULL’ to use the default run loop mode
+//
+//                            ASAudioSessionInterruptionListener,  // a reference to your interruption callback
+//
+//                            NULL                       // data to pass to your interruption listener callback
+//
+//                            );
+//
+//    //这种方式后台，可以连续播放非网络请求歌曲，遇到网络请求歌曲就废,需要后台申请task
+//
+//    AVAudioSession *session = [AVAudioSession sharedInstance];
+//
+//    NSError *setCategoryError = nil;
+//
+//    BOOL success = [session setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
+//
+//    if (!success)
+//
+//    {
+//
+//        /* handle the error condition */
+//
+//        return;
+//
+//    }
+//
+//    NSError *activationError = nil;
+//
+//    success = [session setActive:YES error:&activationError];
+//
+//    if (!success)
+//
+//    {
+//
+//        /* handle the error condition */
+//
+//        return;
+//
+//    }
+//
+//}
+//
+//static void ASAudioSessionInterruptionListener(void *inClientData, UInt32 inInterruptionState)
+//
+//{
+//    App(app);
+//    [app handleInterruption:inInterruptionState];
+//
+//}
+
+

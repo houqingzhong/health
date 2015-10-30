@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface IntroViewController : UIViewController
+@interface IntroViewController : BaseViewController
 
 - (void)loadHtml:(NSString *)fileName;
 

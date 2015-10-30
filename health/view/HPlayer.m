@@ -9,9 +9,8 @@
 #import "HPlayer.h"
 #import "HPublic.h"
 #import "Track.h"
-static void *kStatusKVOKey = &kStatusKVOKey;
-static void *kDurationKVOKey = &kDurationKVOKey;
-static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
+#import "TDSession.h"
+
 
 @interface HPlayer()
 {
@@ -25,6 +24,9 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 @property (nonatomic, strong) NSTimer *timer;
 
 @property (nonatomic, strong) NSDictionary *dict;
+
+@property (strong, nonatomic) TDSession *session;
+
 @end
 
 @implementation HPlayer
@@ -63,6 +65,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
         [_playButtton addTarget:self action:@selector(togglePlayButtonClicked) forControlEvents:UIControlEventTouchUpInside];
         [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
         
+        self.session = [[TDSession alloc] init];
     }
     return self;
 }
@@ -114,10 +117,8 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     NSInteger trackId = [_dict[@"track"][@"trackId"] integerValue];
     if (trackId == playingTrackId) {
         [self scheduleProgressTimer];
-        
         [self updateTogglePlayButton];
     }
-
 
     [self setNeedsLayout];
 }
@@ -133,12 +134,16 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
             //stop
             [app.player stop];
             
+            
             //play
             Track *track = [[Track alloc] init];
             [track setTitle:_dict[@"track"][@"title"]];
             [track setAudioFileURL:[NSURL URLWithString:urlString]];
             
-            app.player = [[DOUAudioStreamer alloc] initWithAudioFile:track];
+            if (app.player) {
+                [app destroyPlayer:self];
+            }
+            app.player = [app createPlayer:track target:self];
             
             [app.player play];
             
@@ -188,11 +193,6 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     else {
         [_progressView setProgress:[app.player currentTime] / [app.player duration]];
     }
-
-//
-//    _timeLeft.text = [self getDurationText:app.player.position *app.player.duration];
-//    _timeRight.text = [self getDurationText:app.player.duration];
-
 }
 
 - (void)scheduleProgressTimer
@@ -208,25 +208,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     self.timer = nil;
 }
 
-
-
 #pragma mark private method
-
-- (void)addListener
-{
-    App(app);
-    [app.player addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:kStatusKVOKey];
-    [app.player addObserver:self forKeyPath:@"duration" options:NSKeyValueObservingOptionNew context:kDurationKVOKey];
-    [app.player addObserver:self forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew context:kBufferingRatioKVOKey];
-}
-
-- (void)removeListener
-{
-    App(app);
-    [app.player removeObserver:self forKeyPath:@"status"];
-    [app.player removeObserver:self forKeyPath:@"duration"];
-    [app.player removeObserver:self forKeyPath:@"bufferingRatio"];
-}
 
 - (NSString *)getDurationText:(CGFloat)duration
 {
@@ -345,6 +327,4 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
-
-
 @end

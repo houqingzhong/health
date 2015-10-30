@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HPublic.h"
 
+@class Track;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -20,6 +21,10 @@
 @property (nonatomic, strong) NSDictionary  *dict;
 
 @property (nonatomic, strong) NSDictionary *musicData;
+
+
+- (DOUAudioStreamer *)createPlayer:(Track *)track target:(id)target;
+- (void)destroyPlayer:(id)target;
 
 @end
 

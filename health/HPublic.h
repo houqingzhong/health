@@ -13,6 +13,11 @@
 #define XA ScreenSize.width/640
 #define WS(s) __weak typeof (self) s = self
 
+static void *kStatusKVOKey = &kStatusKVOKey;
+static void *kDurationKVOKey = &kDurationKVOKey;
+static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
+
+
 #import <UIView+Facade.h>
 #import <UIColor+MoreColors.h>
 #import <UILabel+ContentSize.h>

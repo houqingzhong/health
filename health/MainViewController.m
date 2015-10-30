@@ -26,8 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.navigationItem.rightBarButtonItem = nil;
     
     NSComparisonResult order = [[UIDevice currentDevice].systemVersion compare: @"7.0" options: NSNumericSearch];
     if (order == NSOrderedSame || order == NSOrderedDescending)
