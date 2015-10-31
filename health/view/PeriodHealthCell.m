@@ -35,7 +35,7 @@
     _title.backgroundColor = [UIColor greenMunsell];
     
     _title.font = [UIFont systemFontOfSize:28*XA];
-    _title.textColor = [UIColor blackLeatherJacket];
+    _title.textColor = [UIColor whiteColor];
     
     _subTitle.font = [UIFont systemFontOfSize:28*XA];
     _subTitle.textColor = [UIColor blackOlive];

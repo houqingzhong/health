@@ -14,16 +14,10 @@
 
 @interface HPlayer()
 {
-    UIButton                    *_playButtton;
-    UIProgressView         *_progressView;
-    UILabel                      *_timeLeft;
-    UILabel                      *_timeRight;
-    UILabel                      *_statusLabel;
 }
 /* Timer */
 @property (nonatomic, strong) NSTimer *timer;
 
-@property (nonatomic, strong) NSDictionary *dict;
 
 @property (strong, nonatomic) TDSession *session;
 
@@ -36,38 +30,34 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.backgroundColor = [UIColor whiteColor];
-        _progressView = [UIProgressView new];
-        [self addSubview:_progressView];
-        
-        _statusLabel = [UILabel new];
-
-        [self addSubview:_statusLabel];
-        
-        _timeLeft = [UILabel new];
-        [self addSubview:_timeLeft];
-        
-        _timeRight = [UILabel new];
-        [self addSubview:_timeRight];
-                
-        _playButtton = [UIButton new];
-        [self addSubview:_playButtton];
-        
-        _statusLabel.font = [UIFont systemFontOfSize:28*XA];
-        _statusLabel.textColor = [UIColor rebeccaPurple];
-        
-        _timeLeft.font = [UIFont systemFontOfSize:14*XA];
-        _timeRight.font = [UIFont systemFontOfSize:14*XA];
-        
-        _timeLeft.textColor = [UIColor grayColor];
-        _timeRight.textColor = [UIColor grayColor];
-        
-        [_playButtton addTarget:self action:@selector(togglePlayButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-        [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
-        
-        self.session = [[TDSession alloc] init];
+        [self setup];
+       
     }
     return self;
+}
+
+- (void)setup
+{
+    self.backgroundColor = [UIColor whiteColor];
+    _progressView = [UILabel new];
+    [self addSubview:_progressView];
+    
+    _statusLabel = [UILabel new];
+    
+    [self addSubview:_statusLabel];
+    
+    
+    _playButtton = [UIButton new];
+    [self addSubview:_playButtton];
+    
+    _statusLabel.font = [UIFont systemFontOfSize:28*XA];
+    _statusLabel.textColor = [UIColor rebeccaPurple];
+    
+    _progressView.backgroundColor = [UIColor greenRyb];
+    [_playButtton addTarget:self action:@selector(togglePlayButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
+    
+    self.session = [[TDSession alloc] init];
 }
 
 - (void)layoutSubviews
@@ -81,28 +71,23 @@
 - (void)layout
 {
     CGFloat left = 10 * XA;
-    CGFloat top = 20 * XA;
     CGFloat width = CGRectGetMaxX(self.frame) - 2*left;
     CGFloat height = 30 * XA;
     
-    CGSize size = [_timeLeft.text sizeWithFont:_timeLeft.font maxSize:CGSizeMake(width, 100)];
-    width = size.width + 10*XA;
-    height = size.height;
-    [_timeLeft anchorTopLeftWithLeftPadding:left topPadding:top width:width height:height];
-    
-    size = [_timeRight.text sizeWithFont:_timeRight.font maxSize:CGSizeMake(width, 100)];
-    width = size.width + 10*XA;
-    height = size.height;
-    [_timeRight anchorTopRightWithRightPadding:left topPadding:top width:width height:height];
-    
-    [_progressView anchorTopLeftWithLeftPadding:0 topPadding:0 width:self.width height:1];
+    App(app);
+    if ([app.player duration] == 0.0) {
+        width = 0;
+    }
+    else {
+        width = self.width* [app.player currentTime] / [app.player duration];
+    }
+    [_progressView anchorTopLeftWithLeftPadding:0 topPadding:0 width:width height:1*XA];
     
     width = 80*XA;
     height = 80*XA;
     
     [_playButtton alignUnder:_progressView withLeftPadding:20*XA topPadding:40*XA width:width height:height];
 
-    
     width = self.width - _playButtton.xMax - 30*XA - 20*XA;
     [_statusLabel alignToTheRightOf:_playButtton matchingCenterWithLeftPadding:30*XA width:width height:60*XA];
     
@@ -188,17 +173,25 @@
 
 - (void)updateTrackProgressView:(NSTimer *)timer
 {
-    App(app);
-    if ([app.player duration] == 0.0) {
-        [_progressView setProgress:0.0f];
-    }
-    else {
-        [_progressView setProgress:[app.player currentTime] / [app.player duration]];
-    }
+
+//    App(app);
+//    CGRect rc = _progressView.frame;
+//    if ([app.player duration] == 0.0) {
+//        //[_progressView setProgress:0.0f];
+//        rc.size.width = 0;
+//
+//    }
+//    else {
+//        //[_progressView setProgress:[app.player currentTime] / [app.player duration]];
+//        rc.size.width = self.width* [app.player currentTime] / [app.player duration];
+//    }
+//    _progressView.frame = rc;
+    [self setNeedsLayout];
 }
 
 - (void)scheduleProgressTimer
 {
+    [self.timer invalidate];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTrackProgressView:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     

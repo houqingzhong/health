@@ -31,8 +31,9 @@
     [player addObserver:target forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:kStatusKVOKey];
     [player addObserver:target forKeyPath:@"duration" options:NSKeyValueObservingOptionNew context:kDurationKVOKey];
     [player addObserver:target forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew context:kBufferingRatioKVOKey];
-    
-//    [player addObserver:self forKeyPath:@"currentTime" options:NSKeyValueObservingOptionNew context:kCurrentTimeKVOKey];
+
+    [player addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:kStatusKVOKey];
+
     
     self.target = target;
     
@@ -45,7 +46,8 @@
     [self.player removeObserver:_target forKeyPath:@"status"];
     [self.player removeObserver:_target forKeyPath:@"duration"];
     [self.player removeObserver:_target forKeyPath:@"bufferingRatio"];
-//    [self.player removeObserver:self forKeyPath:@"timingOffset"];
+    
+    //[self removeObserver:self forKeyPath:@"status"];
     
     self.target = nil;
 }
@@ -160,6 +162,8 @@
 
 - (void)scheduleProgressTimer
 {
+    
+    [self.timer invalidate];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTrackProgress) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
@@ -212,6 +216,48 @@
     
 }
 
+- (void)updateStatus
+{
+    App(app);
+    switch (app.player.status) {
+        case DOUAudioStreamerPlaying:
+
+        break;
+        
+        case DOUAudioStreamerPaused:
+        
+        break;
+        
+        case DOUAudioStreamerIdle:
+        
+        break;
+        
+        case DOUAudioStreamerFinished:
+        [_player play];
+        break;
+        
+        case DOUAudioStreamerBuffering:
+        
+        break;
+        
+        case DOUAudioStreamerError:
+        
+        break;
+    }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"status"]) {
+        [self performSelector:@selector(updateStatus)
+                     onThread:[NSThread mainThread]
+                   withObject:nil
+                waitUntilDone:NO];
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
 
 @end
 

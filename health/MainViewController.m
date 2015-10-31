@@ -11,6 +11,8 @@
 #import "HPublic.h"
 #import "HTypeCell.h"
 
+#import "JLYSViewController.h"
+
 #define MainCellIdentifier  @"MainCellIdentifier"
 #define HTimerHeader @"HTimerHeader"
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -36,6 +38,8 @@
     }
     
     self.navigationItem.title = @"中医养生";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"介绍" style:UIBarButtonItemStylePlain target:self action:@selector(introView)];
+
     
     self.view.backgroundColor = [UIColor whiteColor];
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -64,12 +68,16 @@
     [_dataArray addObject:dict];
     
     dict = [NSMutableDictionary new];
-    dict[@"title"] = @"五音疗疾";
+    dict[@"title"] = @"音乐养生";
     dict[@"icon"] = @"yinyue";    
     
     [_dataArray addObject:dict];
     
+    dict = [NSMutableDictionary new];
+    dict[@"title"] = @"经络养生";
+    dict[@"icon"] = @"jingluo";
     
+    [_dataArray addObject:dict];
     
 }
 
@@ -134,12 +142,20 @@
         [self.navigationController pushViewController:[YYYSViewController new] animated:YES];
     }
     else if (2 == indexPath.row) {
-        
+        [self.navigationController pushViewController:[JLYSViewController new] animated:YES];
     }
     else if (3 == indexPath.row)
     {
         
     }
 
+}
+
+
+- (void)introView
+{
+    IntroViewController *iv = [IntroViewController new];
+    [iv loadHtml:@"ysf"];
+    [self.navigationController pushViewController:iv animated:YES];
 }
 @end

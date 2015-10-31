@@ -29,10 +29,14 @@
 - (void)setupUI
 {
     
+    self.clipsToBounds = YES;
+    
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     _imgView = [UIImageView new];
     _title = [UILabel new];
+    _imgView.clipsToBounds = YES;
+    _imgView.contentMode = UIViewContentModeScaleAspectFit;
     
     [self addSubview:_imgView];
     [self addSubview:_title];

@@ -9,9 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @interface HPlayer : UIView
+@property (nonatomic, strong) UILabel           *progressView;
+@property (nonatomic, strong) UILabel           *statusLabel;
+@property (nonatomic, strong) UIButton          *playButtton;
+@property (nonatomic, strong) NSDictionary      *dict;
+
+- (void)setup;
+- (void)layout;
++ (CGFloat)height;
 
 - (void)setData:(NSDictionary *)dict;
 
-+ (CGFloat)height;
+- (void)scheduleProgressTimer;
+- (void)unshceduleProgressTimer;
+
 
 @end
