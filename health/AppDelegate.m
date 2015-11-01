@@ -32,7 +32,7 @@
     [player addObserver:target forKeyPath:@"duration" options:NSKeyValueObservingOptionNew context:kDurationKVOKey];
     [player addObserver:target forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew context:kBufferingRatioKVOKey];
 
-    [player addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:kStatusKVOKey];
+    //[player addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:kStatusKVOKey];
 
     
     self.target = target;

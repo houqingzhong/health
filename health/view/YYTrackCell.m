@@ -46,7 +46,7 @@
 {
     [super layout];
     
-    [_titleLabel anchorCenterLeftWithLeftPadding:20*XA width:self.width/2 height:30];
+    [_titleLabel anchorCenterLeftWithLeftPadding:20*XA width:self.width-20*XA*2 height:30];
     
     //[_playerView alignToTheRightOf:_titleLabel withLeftPadding:20*XA topPadding:0 width:self.width-_titleLabel.width height:self.height];
 

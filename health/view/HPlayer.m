@@ -251,6 +251,8 @@
 - (void)updateStatus
 {
     App(app);
+    NSLog(@"player status %lu", (unsigned long)app.player.status);
+    
     switch (app.player.status) {
         case DOUAudioStreamerPlaying:
             [_statusLabel setText:_dict[@"track"][@"title"]];
@@ -271,6 +273,7 @@
             [_statusLabel setText:@"finished"];
             [_statusLabel setText:_dict[@"track"][@"title"]];
             [_playButtton setImage:[UIImage imageNamed:@"widget_play_pressed"] forState:UIControlStateNormal];
+            [app.player play];
             break;
             
         case DOUAudioStreamerBuffering:

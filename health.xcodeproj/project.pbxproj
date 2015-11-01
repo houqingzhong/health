@@ -48,6 +48,21 @@
 		FF2B93B01BE4F57A0014DF39 /* ysf_ys.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2B93A71BE4F57A0014DF39 /* ysf_ys.png */; };
 		FF56083C1BE50E6300BE2EDA /* jlys.html in Resources */ = {isa = PBXBuildFile; fileRef = FF56083B1BE50E6300BE2EDA /* jlys.html */; };
 		FF56083F1BE5142200BE2EDA /* JLYSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF56083E1BE5142200BE2EDA /* JLYSViewController.m */; };
+		FF56084F1BE58D1C00BE2EDA /* jlys_dcj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5608421BE58D1C00BE2EDA /* jlys_dcj.png */; };
+		FF5608501BE58D1C00BE2EDA /* jlys_dm.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5608431BE58D1C00BE2EDA /* jlys_dm.png */; };
+		FF5608511BE58D1C00BE2EDA /* jlys_fj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5608441BE58D1C00BE2EDA /* jlys_fj.png */; };
+		FF5608521BE58D1C00BE2EDA /* jlys_gj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5608451BE58D1C00BE2EDA /* jlys_gj.png */; };
+		FF5608531BE58D1C00BE2EDA /* jlys_pgj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5608461BE58D1C00BE2EDA /* jlys_pgj.png */; };
+		FF5608541BE58D1C00BE2EDA /* jlys_pj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5608471BE58D1C00BE2EDA /* jlys_pj.png */; };
+		FF5608551BE58D1C00BE2EDA /* jlys_rm.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5608481BE58D1C00BE2EDA /* jlys_rm.png */; };
+		FF5608561BE58D1C00BE2EDA /* jlys_sj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5608491BE58D1C00BE2EDA /* jlys_sj.png */; };
+		FF5608571BE58D1C00BE2EDA /* jlys_sjj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF56084A1BE58D1C00BE2EDA /* jlys_sjj.png */; };
+		FF5608581BE58D1C00BE2EDA /* jlys_wj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF56084B1BE58D1C00BE2EDA /* jlys_wj.png */; };
+		FF5608591BE58D1C00BE2EDA /* jlys_xbj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF56084C1BE58D1C00BE2EDA /* jlys_xbj.png */; };
+		FF56085A1BE58D1C00BE2EDA /* jlys_xcj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF56084D1BE58D1C00BE2EDA /* jlys_xcj.png */; };
+		FF56085B1BE58D1C00BE2EDA /* jlys_xj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF56084E1BE58D1C00BE2EDA /* jlys_xj.png */; };
+		FF56085D1BE590B600BE2EDA /* jlys_dj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF56085C1BE590B600BE2EDA /* jlys_dj.png */; };
+		FF5608601BE595B800BE2EDA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FF56085F1BE595B800BE2EDA /* Player.m */; };
 		FFA281BB1BDCE2270095539F /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281BA1BDCE2270095539F /* NSString+Extension.m */; };
 		FFA281BE1BDCE3DC0095539F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281BD1BDCE3DC0095539F /* MainViewController.m */; };
 		FFA281C11BDCE6930095539F /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281C01BDCE6930095539F /* UIColor+Hex.m */; };
@@ -130,6 +145,22 @@
 		FF56083B1BE50E6300BE2EDA /* jlys.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jlys.html; sourceTree = "<group>"; };
 		FF56083D1BE5142200BE2EDA /* JLYSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLYSViewController.h; path = view/JLYSViewController.h; sourceTree = "<group>"; };
 		FF56083E1BE5142200BE2EDA /* JLYSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLYSViewController.m; path = view/JLYSViewController.m; sourceTree = "<group>"; };
+		FF5608421BE58D1C00BE2EDA /* jlys_dcj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_dcj.png; sourceTree = "<group>"; };
+		FF5608431BE58D1C00BE2EDA /* jlys_dm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_dm.png; sourceTree = "<group>"; };
+		FF5608441BE58D1C00BE2EDA /* jlys_fj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_fj.png; sourceTree = "<group>"; };
+		FF5608451BE58D1C00BE2EDA /* jlys_gj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_gj.png; sourceTree = "<group>"; };
+		FF5608461BE58D1C00BE2EDA /* jlys_pgj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_pgj.png; sourceTree = "<group>"; };
+		FF5608471BE58D1C00BE2EDA /* jlys_pj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_pj.png; sourceTree = "<group>"; };
+		FF5608481BE58D1C00BE2EDA /* jlys_rm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_rm.png; sourceTree = "<group>"; };
+		FF5608491BE58D1C00BE2EDA /* jlys_sj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_sj.png; sourceTree = "<group>"; };
+		FF56084A1BE58D1C00BE2EDA /* jlys_sjj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_sjj.png; sourceTree = "<group>"; };
+		FF56084B1BE58D1C00BE2EDA /* jlys_wj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_wj.png; sourceTree = "<group>"; };
+		FF56084C1BE58D1C00BE2EDA /* jlys_xbj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_xbj.png; sourceTree = "<group>"; };
+		FF56084D1BE58D1C00BE2EDA /* jlys_xcj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_xcj.png; sourceTree = "<group>"; };
+		FF56084E1BE58D1C00BE2EDA /* jlys_xj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_xj.png; sourceTree = "<group>"; };
+		FF56085C1BE590B600BE2EDA /* jlys_dj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_dj.png; sourceTree = "<group>"; };
+		FF56085E1BE595B800BE2EDA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		FF56085F1BE595B800BE2EDA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		FFA281B91BDCE2270095539F /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		FFA281BA1BDCE2270095539F /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		FFA281BC1BDCE3DC0095539F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -196,6 +227,8 @@
 				1D86E9211BE356A00055F5FE /* Track.m */,
 				1D86E91B1BE33EE20055F5FE /* TDSession.h */,
 				1D86E91C1BE33EE20055F5FE /* TDSession.m */,
+				FF56085E1BE595B800BE2EDA /* Player.h */,
+				FF56085F1BE595B800BE2EDA /* Player.m */,
 			);
 			name = engine;
 			sourceTree = "<group>";
@@ -220,6 +253,20 @@
 		FF2B939E1BE4F57A0014DF39 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				FF56085C1BE590B600BE2EDA /* jlys_dj.png */,
+				FF5608421BE58D1C00BE2EDA /* jlys_dcj.png */,
+				FF5608431BE58D1C00BE2EDA /* jlys_dm.png */,
+				FF5608441BE58D1C00BE2EDA /* jlys_fj.png */,
+				FF5608451BE58D1C00BE2EDA /* jlys_gj.png */,
+				FF5608461BE58D1C00BE2EDA /* jlys_pgj.png */,
+				FF5608471BE58D1C00BE2EDA /* jlys_pj.png */,
+				FF5608481BE58D1C00BE2EDA /* jlys_rm.png */,
+				FF5608491BE58D1C00BE2EDA /* jlys_sj.png */,
+				FF56084A1BE58D1C00BE2EDA /* jlys_sjj.png */,
+				FF56084B1BE58D1C00BE2EDA /* jlys_wj.png */,
+				FF56084C1BE58D1C00BE2EDA /* jlys_xbj.png */,
+				FF56084D1BE58D1C00BE2EDA /* jlys_xcj.png */,
+				FF56084E1BE58D1C00BE2EDA /* jlys_xj.png */,
 				FF2B939F1BE4F57A0014DF39 /* ysf_gj.png */,
 				FF2B93A01BE4F57A0014DF39 /* ysf_jb.png */,
 				FF2B93A11BE4F57A0014DF39 /* ysf_jd.png */,
@@ -438,24 +485,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5608581BE58D1C00BE2EDA /* jlys_wj.png in Resources */,
 				FFC30B711BDCB52100D89D62 /* LaunchScreen.storyboard in Resources */,
+				FF5608571BE58D1C00BE2EDA /* jlys_sjj.png in Resources */,
 				FFDCC4981BE13304002CCAB9 /* yyys_liver.html in Resources */,
+				FF5608501BE58D1C00BE2EDA /* jlys_dm.png in Resources */,
 				1D65B9621BE2182700926244 /* yyys_kidney.html in Resources */,
+				FF56085B1BE58D1C00BE2EDA /* jlys_xj.png in Resources */,
+				FF5608561BE58D1C00BE2EDA /* jlys_sj.png in Resources */,
 				FF2B93861BE4F0880014DF39 /* ysf.html in Resources */,
+				FF5608541BE58D1C00BE2EDA /* jlys_pj.png in Resources */,
 				FF2B93B01BE4F57A0014DF39 /* ysf_ys.png in Resources */,
 				FF2B93AB1BE4F57A0014DF39 /* ysf_jl.png in Resources */,
 				FF56083C1BE50E6300BE2EDA /* jlys.html in Resources */,
+				FF5608521BE58D1C00BE2EDA /* jlys_gj.png in Resources */,
 				1D65B9841BE23A2F00926244 /* scys_shenshi.html in Resources */,
 				1D65B9671BE224DA00926244 /* scys_html_bg.png in Resources */,
 				1D65B9601BE2180000926244 /* yyys_lung.html in Resources */,
 				1D65B9741BE237C600926244 /* scys_zishi.html in Resources */,
 				FF2B93AE1BE4F57A0014DF39 /* ysf_tq.png in Resources */,
+				FF56085D1BE590B600BE2EDA /* jlys_dj.png in Resources */,
+				FF5608531BE58D1C00BE2EDA /* jlys_pgj.png in Resources */,
 				1D65B9781BE239E600926244 /* scys_yinshi.html in Resources */,
 				1D65B97A1BE239F500926244 /* scys_maoshi.html in Resources */,
 				1D65B97C1BE23A0400926244 /* scys_chenshi.html in Resources */,
 				1D65B9801BE23A1A00926244 /* scys_wushi.html in Resources */,
 				1D65B98A1BE23A4E00926244 /* scys_haishi.html in Resources */,
 				FFDCC4931BE12F4A002CCAB9 /* yyys_heart.html in Resources */,
+				FF5608551BE58D1C00BE2EDA /* jlys_rm.png in Resources */,
 				FFDCC4911BE12DBF002CCAB9 /* scys.html in Resources */,
 				1D65B9861BE23A3900926244 /* scys_youshi.html in Resources */,
 				1D65B97E1BE23A1000926244 /* scys_sishi.html in Resources */,
@@ -467,13 +524,17 @@
 				FF2B93AA1BE4F57A0014DF39 /* ysf_jd.png in Resources */,
 				1D65B9761BE2397800926244 /* scys_choushi.html in Resources */,
 				1D65B98C1BE3199500926244 /* music.json in Resources */,
+				FF56085A1BE58D1C00BE2EDA /* jlys_xcj.png in Resources */,
 				FF2B93A81BE4F57A0014DF39 /* ysf_gj.png in Resources */,
 				FF2B93751BE453B00014DF39 /* yyys_bg.png in Resources */,
+				FF56084F1BE58D1C00BE2EDA /* jlys_dcj.png in Resources */,
 				FFD8B9A81BE12A020041EBE6 /* yyys.html in Resources */,
 				1D65B9821BE23A2300926244 /* scys_weishi.html in Resources */,
 				FFC30B6C1BDCB52100D89D62 /* Main.storyboard in Resources */,
 				FF2B93A91BE4F57A0014DF39 /* ysf_jb.png in Resources */,
+				FF5608591BE58D1C00BE2EDA /* jlys_xbj.png in Resources */,
 				1D65B9881BE23A4300926244 /* scys_xushi.html in Resources */,
+				FF5608511BE58D1C00BE2EDA /* jlys_fj.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +582,7 @@
 				FFA281BB1BDCE2270095539F /* NSString+Extension.m in Sources */,
 				1D86E91F1BE33EE20055F5FE /* TDSession.m in Sources */,
 				FF2B937B1BE46E3E0014DF39 /* YYTrackCell.m in Sources */,
+				FF5608601BE595B800BE2EDA /* Player.m in Sources */,
 				FF28B72C1BDCF4A60054C7B4 /* HttpClient.m in Sources */,
 				FFDCC4A11BE2775B002CCAB9 /* HPlayer.m in Sources */,
 				FFA281C41BDCEB140095539F /* TimerHeader.m in Sources */,

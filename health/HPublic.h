@@ -33,7 +33,7 @@ static void *kCurrentTimeKVOKey = &kCurrentTimeKVOKey;
 #import "NSString+Extension.h"
 #import "UIColor+Hex.h"
 #import "HPublicMethod.h"
-
+#import "Player.h"
 #import "WeacherLabel.h"
 #import "PeriodHealthCell.h"
 
