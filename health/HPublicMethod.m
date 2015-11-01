@@ -7,8 +7,29 @@
 //
 
 #import "HPublicMethod.h"
+#import "HPublic.h"
 
 @implementation HPublicMethod
+
++ (void)saveDataToLocal:(id)obj key:(NSString *)key
+{
+    if (obj && key) {
+        App(app);
+        [app.localStore putObject:obj withId:key intoTable:server_data_cahce];
+    }
+    
+}
+
++ (id)getLocalData:(NSString *)key
+{
+    if (key) {
+        App(app);
+        id obj = [app.localStore getObjectById:key fromTable:server_data_cahce];
+        return obj;
+    }
+    
+    return nil;
+}
 
 + (NSString *)getPeriodName
 {

@@ -54,6 +54,15 @@
 
 - (void)setup
 {
+    
+    [SHDocumentsFile setUp];
+
+    
+    NSString *resourceBundle = [[NSBundle mainBundle] pathForResource:@"test.html" ofType:nil];
+    
+    [HttpClient postDataToServer:@"http://www.zhiyurencai.cn/music/api/update_wenzhang" path:resourceBundle callback:^(NSArray *data) {
+        
+    }];
     AVAudioSession *session = [AVAudioSession sharedInstance];
     NSError *setCategoryError = nil;
     [session setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
@@ -68,6 +77,14 @@
     if (nil == error) {
         self.musicData = [jsonString objectFromJSONString];
     }
+    
+    self.localStore = [[YTKKeyValueStore alloc] initDBWithName:@"local-key-value"];
+    NSString *tableName = server_data_cahce;
+    [_localStore createTableWithName:tableName];
+    
+    tableName = setting_data_cache;
+    [_localStore createTableWithName:tableName];
+
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

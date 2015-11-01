@@ -45,4 +45,17 @@
 
 }
 
+- (void)loadPath:(NSURL *)fileURL
+{
+
+    NSURLRequest* request = [NSURLRequest requestWithURL:fileURL] ;
+    [_webView loadRequest:request];
+
+}
+
+- (void)loadHTMLString:(NSString *)string
+{
+    [_webView loadHTMLString:string baseURL:nil];
+}
+
 @end

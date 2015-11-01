@@ -14,4 +14,7 @@
 
 + (NSString *)getPeriodName;
 
++ (id)getLocalData:(NSString *)key;
++ (void)saveDataToLocal:(id)obj key:(NSString *)key;
+
 @end

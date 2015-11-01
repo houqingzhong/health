@@ -10,6 +10,7 @@
 #import "HPublic.h"
 
 @class Track;
+@class YTKKeyValueStore;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) DOUAudioStreamer *player;
 
 @property (nonatomic, strong) NSDictionary  *dict;
+@property (strong, nonatomic) YTKKeyValueStore  *localStore;
 
 @property (nonatomic, strong) NSDictionary *musicData;
 @property (nonatomic, strong) id target;

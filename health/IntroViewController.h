@@ -13,4 +13,8 @@
 
 - (void)loadHtml:(NSString *)fileName;
 
+- (void)loadPath:(NSURL *)fileURL;
+
+- (void)loadHTMLString:(NSString *)string;
+
 @end

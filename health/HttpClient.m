@@ -7,6 +7,8 @@
 //
 
 #import "HttpClient.h"
+#import "HPublic.h"
+#import <AFNetworking.h>
 
 @interface HttpClient()
 
@@ -69,9 +71,110 @@
     path=[path stringByReplacingOccurrencesOfString:@"cityNumber" withString:_intString];
     
     NSLog(@"path:%@",path);
-    
-    
 
 }
 
++ (void)postDataToServer:(NSString *)strURL path:(NSString *)path callback:(void (^)(NSArray *))callback
+{
+
+    NSData *data = [NSData dataWithContentsOfFile:path];
+//    NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    NSString *content = [AESCrypt encrypt:dataString password:@"wenzhang&19851010&yangsheng"];
+//    
+//    NSDictionary *dic = @{@"content":@"jjk", @"content_id":@"3865"};
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+
+    [manager POST:strURL parameters:@{@"content_id":@"3866"} constructingBodyWithBlock:^(id formData) {
+        [formData appendPartWithFormData:data name:@"content"];
+        
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSString *ret = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"%@", ret);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
+    
+}
+
+
++ (void)getDataFromServer:(NSString *)strURL key:(NSString *)key callback:(void (^)(NSArray *))callback
+{
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = nil;
+    [manager GET:strURL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *dict = (NSDictionary *)responseObject;
+        if ([dict[@"code"] integerValue] == 0) {
+            
+            NSArray *arr = dict[@"data"];
+            
+//            NSMutableArray *newArr = [NSMutableArray new];
+//            for (NSDictionary *dict_ in arr) {
+//                NSMutableDictionary *newDict = [NSMutableDictionary dictionaryWithDictionary:dict_];
+//                NSString *title = dict_[@"title"];
+//                NSString *content = [dict_[@"content"] JSONString];
+//                //content = [AESCrypt decrypt:content password:@"wenzhang&19851010&yangsheng"];
+//                NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+//                SHDocumentsFile *file = [SHDocumentsFile fileWithName:[NSString stringWithFormat:@"%@.html", title] data:data];
+//                NSError *error = nil;
+//                [file saveData:&error];
+//                newDict[@"file"] = file;
+//                
+//                [newArr addObject:newDict];
+//            }
+            
+            if (callback) {
+                callback(arr);
+            }
+            
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callback) {
+            callback(nil);
+        }
+    }];
+}
+
+//+ (void)getWenzhang:(NSString *)strURL callback:(void (^)(BOOL))callback
+//{
+//
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.responseSerializer.acceptableContentTypes = nil;
+//    [manager GET:strURL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSDictionary *dict = (NSDictionary *)responseObject;
+//        if ([dict[@"code"] integerValue] == 0) {
+//            
+//            for (NSDictionary *dict_ in dict[@"data"]) {
+//                NSString *title = dict_[@"title"];
+//                NSString *content = dict_[@"content"];
+//                content = [AESCrypt decrypt:content password:@"wenzhang&19851010&yangsheng"];
+//                NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+//                SHDocumentsFile *file = [SHDocumentsFile fileWithName:[NSString stringWithFormat:@"%@.html", title] data:data];
+//                NSError *error = nil;
+//                [file saveData:&error];
+//            }
+//            
+//            if (callback) {
+//                callback(YES);
+//            }
+//            
+//        }
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        if (callback) {
+//            callback(NO);
+//        }
+//    }];
+//}
+
+
 @end
+

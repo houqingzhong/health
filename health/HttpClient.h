@@ -10,4 +10,8 @@
 
 @interface HttpClient : NSObject
 
++ (void)postDataToServer:(NSString *)strURL path:(NSString *)path callback:(void (^)(NSArray *))callback;
+
++ (void)getDataFromServer:(NSString *)strURL key:(NSString *)key callback:(void (^)(NSArray *))callback;
+
 @end

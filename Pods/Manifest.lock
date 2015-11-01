@@ -1,4 +1,5 @@
 PODS:
+  - AESCrypt (0.0.1)
   - AFNetworking (2.6.1):
     - AFNetworking/NSURLConnection (= 2.6.1)
     - AFNetworking/NSURLSession (= 2.6.1)
@@ -24,41 +25,59 @@ PODS:
     - AFNetworking (~> 2.3)
   - DOUAudioStreamer (0.2.11)
   - Facade (1.1.0)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
   - JSONKit-NoWarning (1.2)
+  - MD5Digest (1.0.1)
   - MZClockView (1.0.2)
+  - NSString+TBEncryption (1.0)
   - RichStyleLabel (0.0.1)
   - SmileWeather (0.1.4)
   - TTTAttributedLabel (1.13.4)
   - UIColor-MoreColors (1.1.0)
   - UILabel+ContentSize (1.0.3)
+  - YTKKeyValueStore (0.1.2):
+    - FMDB (~> 2.0)
   - ZCAnimatedLabel (0.0.3)
 
 DEPENDENCIES:
+  - AESCrypt (~> 0.0.1)
   - AFNetworking (~> 2.0)
   - AGLocationDispatcher (~> 0.0.7.2)
   - DOUAudioStreamer (~> 0.2.11)
   - Facade (~> 1.1.0)
   - JSONKit-NoWarning (~> 1.2)
+  - MD5Digest (~> 1.0.1)
   - MZClockView (~> 1.0.2)
+  - NSString+TBEncryption (~> 1.0)
   - RichStyleLabel (~> 0.0.1)
   - SmileWeather (~> 0.1.4)
   - TTTAttributedLabel (~> 1.13.4)
   - UIColor-MoreColors (~> 1.1.0)
   - UILabel+ContentSize (~> 1.0.3)
+  - YTKKeyValueStore (~> 0.1.2)
   - ZCAnimatedLabel (~> 0.0.3)
 
 SPEC CHECKSUMS:
+  AESCrypt: 1d89bf8b0789cf274ab2205ea461adbe9321d5f8
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
   AGLocationDispatcher: cd4d05f41ac6b4c05df1dfb89b7e37c2b8d480f4
   DOUAudioStreamer: 8aefc3e80eb6c01ec89fa3c30743c660e8c55bae
   Facade: 509c4a0e5fa8517d5e0e1e47251b520775904a9a
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
+  MD5Digest: 2757ae2ee239148912a42063135c6fab2fa082f9
   MZClockView: dccbcd768ddeeb661cfd0dfe1772c32b05f39a6c
+  NSString+TBEncryption: a1cae62b97b856e2dbb63d69a8a450031ecd268f
   RichStyleLabel: 7b9f80a4fcf4a9b3c6b3b2ba2805d53b4f4912cc
   SmileWeather: 91f86b925f725997144b7eedcf5a5fc719258a43
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
   UIColor-MoreColors: 66b65dcd322602ccd4d8064037a1ca0b4bb6acb2
   UILabel+ContentSize: ca71fe5d87afd752e53a34466e52598d65db4705
+  YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
   ZCAnimatedLabel: 8212da1d26db90eaac3848fd29415b56ef56dcd6
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

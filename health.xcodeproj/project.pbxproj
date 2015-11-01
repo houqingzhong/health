@@ -63,6 +63,11 @@
 		FF56085B1BE58D1C00BE2EDA /* jlys_xj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF56084E1BE58D1C00BE2EDA /* jlys_xj.png */; };
 		FF56085D1BE590B600BE2EDA /* jlys_dj.png in Resources */ = {isa = PBXBuildFile; fileRef = FF56085C1BE590B600BE2EDA /* jlys_dj.png */; };
 		FF5608601BE595B800BE2EDA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FF56085F1BE595B800BE2EDA /* Player.m */; };
+		FF5608681BE5C4CA00BE2EDA /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = FF5608671BE5C4CA00BE2EDA /* test.html */; };
+		FF5608721BE5F1FE00BE2EDA /* SHDocumentsFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FF56086B1BE5F1FE00BE2EDA /* SHDocumentsFile.m */; };
+		FF5608731BE5F1FE00BE2EDA /* SHDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FF56086D1BE5F1FE00BE2EDA /* SHDownloader.m */; };
+		FF5608741BE5F1FE00BE2EDA /* SHFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FF56086F1BE5F1FE00BE2EDA /* SHFile.m */; };
+		FF5608751BE5F1FE00BE2EDA /* SHTemporaryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5608711BE5F1FE00BE2EDA /* SHTemporaryFile.m */; };
 		FFA281BB1BDCE2270095539F /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281BA1BDCE2270095539F /* NSString+Extension.m */; };
 		FFA281BE1BDCE3DC0095539F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281BD1BDCE3DC0095539F /* MainViewController.m */; };
 		FFA281C11BDCE6930095539F /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA281C01BDCE6930095539F /* UIColor+Hex.m */; };
@@ -161,6 +166,15 @@
 		FF56085C1BE590B600BE2EDA /* jlys_dj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jlys_dj.png; sourceTree = "<group>"; };
 		FF56085E1BE595B800BE2EDA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		FF56085F1BE595B800BE2EDA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		FF5608671BE5C4CA00BE2EDA /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		FF56086A1BE5F1FE00BE2EDA /* SHDocumentsFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDocumentsFile.h; sourceTree = "<group>"; };
+		FF56086B1BE5F1FE00BE2EDA /* SHDocumentsFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDocumentsFile.m; sourceTree = "<group>"; };
+		FF56086C1BE5F1FE00BE2EDA /* SHDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDownloader.h; sourceTree = "<group>"; };
+		FF56086D1BE5F1FE00BE2EDA /* SHDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDownloader.m; sourceTree = "<group>"; };
+		FF56086E1BE5F1FE00BE2EDA /* SHFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFile.h; sourceTree = "<group>"; };
+		FF56086F1BE5F1FE00BE2EDA /* SHFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFile.m; sourceTree = "<group>"; };
+		FF5608701BE5F1FE00BE2EDA /* SHTemporaryFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTemporaryFile.h; sourceTree = "<group>"; };
+		FF5608711BE5F1FE00BE2EDA /* SHTemporaryFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTemporaryFile.m; sourceTree = "<group>"; };
 		FFA281B91BDCE2270095539F /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		FFA281BA1BDCE2270095539F /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		FFA281BC1BDCE3DC0095539F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -280,6 +294,21 @@
 			path = png;
 			sourceTree = "<group>";
 		};
+		FF5608691BE5F1FE00BE2EDA /* SHFile */ = {
+			isa = PBXGroup;
+			children = (
+				FF56086A1BE5F1FE00BE2EDA /* SHDocumentsFile.h */,
+				FF56086B1BE5F1FE00BE2EDA /* SHDocumentsFile.m */,
+				FF56086C1BE5F1FE00BE2EDA /* SHDownloader.h */,
+				FF56086D1BE5F1FE00BE2EDA /* SHDownloader.m */,
+				FF56086E1BE5F1FE00BE2EDA /* SHFile.h */,
+				FF56086F1BE5F1FE00BE2EDA /* SHFile.m */,
+				FF5608701BE5F1FE00BE2EDA /* SHTemporaryFile.h */,
+				FF5608711BE5F1FE00BE2EDA /* SHTemporaryFile.m */,
+			);
+			path = SHFile;
+			sourceTree = "<group>";
+		};
 		FFC30B551BDCB52100D89D62 = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +330,7 @@
 		FFC30B601BDCB52100D89D62 /* health */ = {
 			isa = PBXGroup;
 			children = (
+				FF5608691BE5F1FE00BE2EDA /* SHFile */,
 				1D86E9161BE33ED50055F5FE /* engine */,
 				FFD8B9A61BE129F50041EBE6 /* html */,
 				FFC30B801BDCC16100D89D62 /* category */,
@@ -417,6 +447,7 @@
 				1D65B98B1BE3199500926244 /* music.json */,
 				FF2B93851BE4F0880014DF39 /* ysf.html */,
 				FF56083B1BE50E6300BE2EDA /* jlys.html */,
+				FF5608671BE5C4CA00BE2EDA /* test.html */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -433,6 +464,7 @@
 				FFC30B5B1BDCB52100D89D62 /* Frameworks */,
 				FFC30B5C1BDCB52100D89D62 /* Resources */,
 				50A0CD785E0C7B992CB1D167 /* Copy Pods Resources */,
+				ABF42114F6A7FA87EF741FE6 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -520,6 +552,7 @@
 				FFC30B6E1BDCB52100D89D62 /* Assets.xcassets in Resources */,
 				FF2B93AD1BE4F57A0014DF39 /* ysf_ss.png in Resources */,
 				1D65B95E1BE217B100926244 /* yyys_spleen.html in Resources */,
+				FF5608681BE5C4CA00BE2EDA /* test.html in Resources */,
 				FF2B93AF1BE4F57A0014DF39 /* ysf_xs.png in Resources */,
 				FF2B93AA1BE4F57A0014DF39 /* ysf_jd.png in Resources */,
 				1D65B9761BE2397800926244 /* scys_choushi.html in Resources */,
@@ -571,6 +604,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ABF42114F6A7FA87EF741FE6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -584,18 +632,22 @@
 				FF2B937B1BE46E3E0014DF39 /* YYTrackCell.m in Sources */,
 				FF5608601BE595B800BE2EDA /* Player.m in Sources */,
 				FF28B72C1BDCF4A60054C7B4 /* HttpClient.m in Sources */,
+				FF5608741BE5F1FE00BE2EDA /* SHFile.m in Sources */,
 				FFDCC4A11BE2775B002CCAB9 /* HPlayer.m in Sources */,
 				FFA281C41BDCEB140095539F /* TimerHeader.m in Sources */,
 				FFC30B7B1BDCB95100D89D62 /* HBaseCell.m in Sources */,
 				FF28B72F1BDD05330054C7B4 /* WeacherLabel.m in Sources */,
 				FF2B93841BE4EB100014DF39 /* JLCell.m in Sources */,
 				FFD8B9A51BE128CE0041EBE6 /* IntroViewController.m in Sources */,
+				FF5608721BE5F1FE00BE2EDA /* SHDocumentsFile.m in Sources */,
+				FF5608751BE5F1FE00BE2EDA /* SHTemporaryFile.m in Sources */,
 				FFC30B661BDCB52100D89D62 /* AppDelegate.m in Sources */,
 				FFDA637C1BE3C48900CF80B6 /* YYYSSectionView.m in Sources */,
 				FFDCC49B1BE270FC002CCAB9 /* HTypeCell.m in Sources */,
 				FFDCC4961BE1304B002CCAB9 /* WebViewDetailController.m in Sources */,
 				FFA281BE1BDCE3DC0095539F /* MainViewController.m in Sources */,
 				FFA281C11BDCE6930095539F /* UIColor+Hex.m in Sources */,
+				FF5608731BE5F1FE00BE2EDA /* SHDownloader.m in Sources */,
 				FFD8B9A21BE1271E0041EBE6 /* BaseViewController.m in Sources */,
 				FFDCC49E1BE27289002CCAB9 /* YYCell.m in Sources */,
 				FF28B7351BDD14420054C7B4 /* DetailViewController.m in Sources */,
