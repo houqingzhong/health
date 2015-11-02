@@ -93,6 +93,7 @@
 		FFDCC49B1BE270FC002CCAB9 /* HTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC49A1BE270FC002CCAB9 /* HTypeCell.m */; };
 		FFDCC49E1BE27289002CCAB9 /* YYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC49D1BE27289002CCAB9 /* YYCell.m */; };
 		FFDCC4A11BE2775B002CCAB9 /* HPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDCC4A01BE2775B002CCAB9 /* HPlayer.m */; };
+		FFED0EFE1BE7A24F0066997D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFED0EFD1BE7A24F0066997D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,7 +184,7 @@
 		FFA281C01BDCE6930095539F /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		FFA281C21BDCEB140095539F /* TimerHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerHeader.h; sourceTree = "<group>"; };
 		FFA281C31BDCEB140095539F /* TimerHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerHeader.m; sourceTree = "<group>"; };
-		FFC30B5E1BDCB52100D89D62 /* 中医养生.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "中医养生.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC30B5E1BDCB52100D89D62 /* 中医养生堂.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "中医养生堂.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC30B621BDCB52100D89D62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FFC30B641BDCB52100D89D62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FFC30B651BDCB52100D89D62 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -220,6 +221,7 @@
 		FFDCC49D1BE27289002CCAB9 /* YYCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCell.m; sourceTree = "<group>"; };
 		FFDCC49F1BE2775B002CCAB9 /* HPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPlayer.h; sourceTree = "<group>"; };
 		FFDCC4A01BE2775B002CCAB9 /* HPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPlayer.m; sourceTree = "<group>"; };
+		FFED0EFD1BE7A24F0066997D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 		FFC30B551BDCB52100D89D62 = {
 			isa = PBXGroup;
 			children = (
+				FFED0EFD1BE7A24F0066997D /* Default-568h@2x.png */,
 				FFC30B601BDCB52100D89D62 /* health */,
 				FFC30B5F1BDCB52100D89D62 /* Products */,
 				B18E3907ACF8E810663E1D2B /* Pods */,
@@ -322,7 +325,7 @@
 		FFC30B5F1BDCB52100D89D62 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FFC30B5E1BDCB52100D89D62 /* 中医养生.app */,
+				FFC30B5E1BDCB52100D89D62 /* 中医养生堂.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -472,7 +475,7 @@
 			);
 			name = health;
 			productName = health;
-			productReference = FFC30B5E1BDCB52100D89D62 /* 中医养生.app */;
+			productReference = FFC30B5E1BDCB52100D89D62 /* 中医养生堂.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -526,6 +529,7 @@
 				FF56085B1BE58D1C00BE2EDA /* jlys_xj.png in Resources */,
 				FF5608561BE58D1C00BE2EDA /* jlys_sj.png in Resources */,
 				FF2B93861BE4F0880014DF39 /* ysf.html in Resources */,
+				FFED0EFE1BE7A24F0066997D /* Default-568h@2x.png in Resources */,
 				FF5608541BE58D1C00BE2EDA /* jlys_pj.png in Resources */,
 				FF2B93B01BE4F57A0014DF39 /* ysf_ys.png in Resources */,
 				FF2B93AB1BE4F57A0014DF39 /* ysf_jl.png in Resources */,
@@ -772,13 +776,15 @@
 			baseConfigurationReference = 399DFCCFE63ACE241A2D3D6E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = health/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tingting.health;
-				PRODUCT_NAME = "中医养生";
+				PRODUCT_NAME = "中医养生堂";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -787,13 +793,15 @@
 			baseConfigurationReference = 1C59895F6647A2FA57E6C1FF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = health/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tingting.health;
-				PRODUCT_NAME = "中医养生";
+				PRODUCT_NAME = "中医养生堂";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

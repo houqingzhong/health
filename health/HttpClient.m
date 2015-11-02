@@ -87,7 +87,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
 
-    [manager POST:strURL parameters:@{@"content_id":@"3867"} constructingBodyWithBlock:^(id formData) {
+    [manager POST:strURL parameters:@{@"content_id":@"3865"} constructingBodyWithBlock:^(id formData) {
         [formData appendPartWithFormData:data name:@"content"];
         
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
