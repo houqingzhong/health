@@ -103,7 +103,7 @@
 }
 
 
-+ (void)getDataFromServer:(NSString *)strURL key:(NSString *)key callback:(void (^)(NSArray *))callback
++ (void)getDataFromServer:(NSString *)strURL key:(NSString *)key callback:(void (^)(id))callback
 {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -112,7 +112,7 @@
         NSDictionary *dict = (NSDictionary *)responseObject;
         if ([dict[@"code"] integerValue] == 0) {
             
-            NSArray *arr = dict[@"data"];
+//            NSArray *arr = dict[@"data"];
             
 //            NSMutableArray *newArr = [NSMutableArray new];
 //            for (NSDictionary *dict_ in arr) {
@@ -130,7 +130,7 @@
 //            }
             
             if (callback) {
-                callback(arr);
+                callback(dict[@"data"]);
             }
             
         }

@@ -7,11 +7,14 @@
 //
 
 #import "IntroViewController.h"
+#import "HPublic.h"
 
 @interface IntroViewController()
 {
     UIWebView *_webView;
 }
+
+@property (nonatomic, strong) NSString *contentId;
 @end
 
 @implementation IntroViewController
@@ -57,5 +60,19 @@
 {
     [_webView loadHTMLString:string baseURL:nil];
 }
+
+- (void)loadHTMLWithContentId:(NSString *)contentId
+{
+    WS(ws);
+    [HttpClient getDataFromServer:[NSString stringWithFormat:@"%@wenzhang_content/%@", Host, contentId] key:[contentId MD5Digest] callback:^(id data) {
+        
+        if(data && data[@"content"])
+        {
+            [ws loadHTMLString:data[@"content"]];
+        }
+        
+    }];
+}
+
 
 @end

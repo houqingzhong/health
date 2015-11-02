@@ -40,8 +40,9 @@
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    //_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.separatorColor = [UIColor greenMunsell];
+
     
     [_tableView anchorTopLeftWithLeftPadding:0 topPadding:0 width:CGRectGetWidth(self.view.frame) height:CGRectGetHeight(self.view.frame)];
     
@@ -53,8 +54,8 @@
     self.navigationItem.title = @"经络养生";
 
     WS(ws);
-    [HttpClient getDataFromServer:[NSString stringWithFormat:@"%@wenzhang/%@", Host, JingLuoTag] key:[JingLuoTag MD5Digest] callback:^(NSArray *dataArray) {
-        self.dataArray = dataArray;
+    [HttpClient getDataFromServer:[NSString stringWithFormat:@"%@wenzhang/%@", Host, JingLuoTag] key:[JingLuoTag MD5Digest] callback:^(id data) {
+        self.dataArray = data;
         [ws.tableView reloadData];
     }];
 }
@@ -82,8 +83,10 @@
     
     if (nil == cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
     }
-    
+
     NSDictionary *dict = _dataArray[indexPath.row];
     cell.textLabel.text = dict[@"title"];
     //[cell setData:_dataArray[indexPath.row]];
@@ -112,7 +115,7 @@
 - (void)jumpToDetail:(NSDictionary *)dict
 {
     IntroViewController *iv = [IntroViewController new];
-    [iv loadHTMLString:dict[@"content"]];
+    [iv loadHTMLWithContentId:dict[@"id"]];
     [self.navigationController pushViewController:iv animated:YES];
     
 }

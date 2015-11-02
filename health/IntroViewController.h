@@ -17,4 +17,5 @@
 
 - (void)loadHTMLString:(NSString *)string;
 
+- (void)loadHTMLWithContentId:(NSString *)contentId;
 @end
