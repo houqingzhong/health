@@ -81,8 +81,7 @@
 //    NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 //    NSString *content = [AESCrypt encrypt:dataString password:@"wenzhang&19851010&yangsheng"];
 //    
-//    NSDictionary *dic = @{@"content":@"jjk", @"content_id":@"3865"};
-
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
