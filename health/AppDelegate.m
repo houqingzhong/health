@@ -69,7 +69,7 @@
     NSError *activationError = nil;
     [session setActive:YES error:&activationError];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleInterruptionChangeToState:) name:AVAudioSessionRouteChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(interruption:) name:AVAudioSessionInterruptionNotification object:nil];
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"music.json" withExtension:nil];
     NSError *error = nil;
@@ -149,33 +149,33 @@
 //    [[SCLTAudioPlayer sharedPlayer] play];
 //}
 
-
-
-- (void)handleInterruptionChangeToState:(NSNotification *)notification
-
+- (void) interruption:(NSNotification*)notification
 {
-    
-    AudioQueuePropertyID inInterruptionState= (UInt32)[[notification object] longValue];
-    
+    NSDictionary *interuptionDict = notification.userInfo;
+    NSUInteger interuptionType = (NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey];
+    if(interuptionType == AVAudioSessionInterruptionTypeBegan)
+        [self beginInterruption];
+    else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
+        [self endInterruption];
+}
 
-    if (inInterruptionState == kAudioSessionBeginInterruption)
-        
-    {
-        
-        [_player pause];
-    }
+- (void)beginInterruption {
     
-    else if (inInterruptionState == kAudioSessionEndInterruption)
-        
-    {
-        
-        
-        [_player play];
-        
-    }
+    [_player pause];
+
+//    LinphoneCall* c = linphone_core_get_current_call(theLinphoneCore);
+//    [LinphoneLogger logc:LinphoneLoggerLog format:"Sound interruption detected!"];
+//    if (c) {
+//        linphone_core_pause_call(theLinphoneCore, c);
+//    }
     
 }
 
+- (void)endInterruption {
+    [_player play];
+
+//    [LinphoneLogger logc:LinphoneLoggerLog format:"Sound interruption ended!"];
+}
 
 - (void)scheduleProgressTimer
 {
